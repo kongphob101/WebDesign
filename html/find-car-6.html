@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>หารถที่เหมาะกับคุณ | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="6" class="quiz-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="quiz-section">
+        <div class="container section-space">
+          <p class="eyebrow">แบบสอบถามช่วยเลือกรถ</p>
+          <h1>รถแบบไหนเหมาะกับคุณ?</h1>
+          <p>ตอบคำถามสั้น ๆ 6 ข้อ เพื่อค้นหารถที่ใช่ สำหรับไลฟ์สไตล์ของคุณ</p>
+          <ol class="quiz-progress" id="quizProgress" aria-label="ความคืบหน้า">
+            <li class="current" aria-current="step">
+              1
+            </li>
+            <li class="">
+              2
+            </li>
+            <li class="">
+              3
+            </li>
+            <li class="">
+              4
+            </li>
+            <li class="">
+              5
+            </li>
+            <li class="">
+              6
+            </li>
+          </ol>
+          <!-- TODO: ต่อ JavaScript สำหรับฟอร์มนี้ภายหลัง ตอนนี้แสดง Layout และช่องกรอกตัวอย่างเท่านั้น -->
+          <form id="quizForm" class="quiz-form">
+            <fieldset>
+              <legend id="quizQuestion" class="h3 visually-hidden">
+                ปกติคุณใช้รถทำอะไรเป็นหลัก?
+              </legend>
+              <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+              <div id="quizOptions" class="row g-3">
+                <div class="col-4">
+                  <label class="panel quiz-option"><img src="../img/12-best-ev-banner.png" alt="ลักษณะการใช้งานรถ" class="" loading="lazy"><div class="quiz-option-copy"><input class="form-check-input" type="radio" name="answer" value="city" checked=""><strong>ขับในเมือง</strong><p>ไปทำงาน ซื้อของ และเดินทางใกล้บ้าน</p></div></label>
+                </div>
+                <div class="col-4">
+                  <label class="panel quiz-option"><img src="../img/10-read-banner.png" alt="ลักษณะการใช้งานรถ" class="" loading="lazy"><div class="quiz-option-copy"><input class="form-check-input" type="radio" name="answer" value="family"><strong>เดินทางกับครอบครัว</strong><p>พาเด็กหรือผู้สูงอายุเดินทาง พร้อมสัมภาระ</p></div></label>
+                </div>
+                <div class="col-4">
+                  <label class="panel quiz-option"><img src="../img/04-brand-banner.png" alt="ลักษณะการใช้งานรถ" class="" loading="lazy"><div class="quiz-option-copy"><input class="form-check-input" type="radio" name="answer" value="long"><strong>เดินทางไกล</strong><p>ขับต่างจังหวัดหรือออกทริปเป็นประจำ</p></div></label>
+                </div>
+              </div>
+            </fieldset>
+            <p id="quizError" class="text-danger mt-3" role="alert"></p>
+            <div class="d-flex justify-content-between mt-3">
+              <button class="btn btn-outline-primary" type="button" id="quizBack" disabled="">ย้อนกลับ</button>
+              <!-- TODO: เพิ่มคำถามข้อ 2–6: งบประมาณ, จำนวนผู้โดยสาร, ความสะดวกในการชาร์จ, พลังงาน, สิ่งที่สำคัญที่สุด แล้วคัดเลือกรถตามคำตอบ -->
+              <button class="btn btn-primary" type="button" id="quizNext">ถัดไป →</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="container section-space" id="quizResult" tabindex="-1">
+        <div class="d-flex flex-wrap justify-content-between gap-3 align-items-center">
+          <div>
+            <h2>จากคำตอบของคุณ เราแนะนำรถเหล่านี้</h2>
+            <p>นี่คือตัวอย่างรถที่เหมาะกับไลฟ์สไตล์ของคุณ คุณจะได้ผลลัพธ์เต็มรูปแบบเมื่อทำครบทั้ง 6 ข้อ</p>
+          </div>
+          <!-- TODO: ล้างคำตอบและกลับไปข้อแรกด้วย JavaScript -->
+          <button type="button" class="text-button" id="quizRestart">แก้ไขคำตอบ</button>
+        </div>
+        <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+        <div id="quizResultCars" class="row g-3 mt-2">
+          <div class="col-6">
+            <article class="car-card car-card-mini">
+              <a class="car-image" href="car-detail-3.html"><span class="result-rank">อันดับ 1</span><img src="../img/03-car-detail-banner.png" alt="Toyota Corolla Cross" class="" loading="lazy"></a>
+              <div class="car-card-body">
+                <a class="car-name" href="car-detail-3.html">Toyota Corolla Cross</a>
+                <p class="small mb-2">HEV Smart · ไฮบริด</p>
+                <strong>เริ่ม 989,000 บาท</strong>
+                <div class="mt-3">
+                  <span class="reason-tag">พื้นที่เหมาะกับการใช้งาน</span>
+                  <span class="reason-tag">อยู่ในงบที่เลือก</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-6">
+            <article class="car-card car-card-mini">
+              <a class="car-image" href="car-detail-3.html"><span class="result-rank">อันดับ 2</span><img src="../img/Car img/honda-civic.png" alt="Honda Civic" class="" loading="lazy"></a>
+              <div class="car-card-body">
+                <a class="car-name" href="car-detail-3.html">Honda Civic</a>
+                <p class="small mb-2">e:HEV EL+ · ไฮบริด</p>
+                <strong>เริ่ม 1,099,000 บาท</strong>
+                <div class="mt-3">
+                  <span class="reason-tag">พื้นที่เหมาะกับการใช้งาน</span>
+                  <span class="reason-tag">อยู่ในงบที่เลือก</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="data-note">ข้อมูลและราคาเป็นตัวอย่างสำหรับโครงงาน กรุณาตรวจสอบกับผู้ผลิตหรือผู้จำหน่ายก่อนตัดสินใจ</p>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

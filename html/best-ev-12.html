@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>Best EV ตามการใช้งาน | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="12" class="best-ev-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>Best EV สำหรับชีวิตทุกคน</h1>
+            <p>คัดสรรรถยนต์ไฟฟ้าที่ตอบโจทย์ในทุกไลฟ์สไตล์ พร้อมข้อดี<br>ข้อควรพิจารณา เพื่อให้คุณตัดสินใจได้ง่าย</p>
+          </div>
+        </div>
+      </section>
+      <section class="container section-space">
+        <div class="section-heading">
+          <h2>รถยนต์ไฟฟ้า แนะนำสำหรับการใช้งานในเมือง</h2>
+          <p>คล่องตัว และมีตัวเลือกสำหรับการใช้ชีวิตประจำวัน</p>
+        </div>
+        <!-- อันดับ col-1 / รูป col-4 / ข้อมูล col-3 / จุดเด่น col-4 -->
+        <article class="rank-row panel">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-1 rank-number">
+              <strong>1</strong>
+              <span>อันดับ</span>
+            </div>
+            <div class="col-4 rank-photo">
+              <img src="../img/Car img/byd-atto-3.png" alt="BYD ATTO 3" class="" loading="lazy">
+            </div>
+            <div class="col-3 rank-info p-3">
+              <h2>BYD ATTO 3</h2>
+              <p>Extended Range</p>
+              <strong class="rank-price">฿ 1,199,900</strong>
+              <div class="ev-stats">
+                <div>
+                  <strong>420 กม.</strong>
+                  <small>ระยะทาง (WLTP)</small>
+                </div>
+                <div>
+                  <strong>60.5 kWh</strong>
+                  <small>ขนาดแบตเตอรี่</small>
+                </div>
+                <div>
+                  <strong>7.3 วินาที</strong>
+                  <small>0–100 กม./ชม.</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 rank-highlights p-3">
+              <h3>ลักษณะเด่น</h3>
+              <ul>
+                <li>
+                  ขนาดกะทัดรัด ขับง่ายในเมือง
+                </li>
+                <li>
+                  อุปกรณ์ครบสำหรับการใช้งาน
+                </li>
+                <li>
+                  พื้นที่เหมาะกับครอบครัว
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="car-detail-3.html" class="btn btn-primary">ดูรายละเอียด →</a>
+                <a href="compare-7.html" class="btn btn-outline-primary">เปรียบเทียบ</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="rank-row panel">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-1 rank-number">
+              <strong>2</strong>
+              <span>อันดับ</span>
+            </div>
+            <div class="col-4 rank-photo">
+              <img src="../img/Car img/byd-atto-3.png" alt="ภาพแทนรถ รอเปลี่ยนเป็น Tesla Model Y" class="" loading="lazy">
+            </div>
+            <div class="col-3 rank-info p-3">
+              <h2>Tesla Model Y</h2>
+              <p>Long Range</p>
+              <strong class="rank-price">฿ 2,259,000</strong>
+              <div class="ev-stats">
+                <div>
+                  <strong>573 กม.</strong>
+                  <small>ระยะทาง (WLTP)</small>
+                </div>
+                <div>
+                  <strong>75 kWh</strong>
+                  <small>ขนาดแบตเตอรี่</small>
+                </div>
+                <div>
+                  <strong>5.0 วินาที</strong>
+                  <small>0–100 กม./ชม.</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 rank-highlights p-3">
+              <h3>ลักษณะเด่น</h3>
+              <ul>
+                <li>
+                  เทคโนโลยีและระบบขับเคลื่อน
+                </li>
+                <li>
+                  พื้นที่ใช้งานกว้าง นั่งสบาย
+                </li>
+                <li>
+                  เหมาะทั้งในเมืองและนอกเมือง
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="car-detail-3.html" class="btn btn-primary">ดูรายละเอียด →</a>
+                <a href="compare-7.html" class="btn btn-outline-primary">เปรียบเทียบ</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="rank-row panel">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-1 rank-number">
+              <strong>3</strong>
+              <span>อันดับ</span>
+            </div>
+            <div class="col-4 rank-photo">
+              <img src="../img/Car img/byd-atto-3.png" alt="ภาพแทนรถ รอเปลี่ยนเป็น MG4 Electric" class="" loading="lazy">
+            </div>
+            <div class="col-3 rank-info p-3">
+              <h2>MG4 Electric</h2>
+              <p>Long Range</p>
+              <strong class="rank-price">ตรวจสอบราคา</strong>
+              <div class="ev-stats">
+                <div>
+                  <strong>425 กม.</strong>
+                  <small>ระยะทาง (WLTP)</small>
+                </div>
+                <div>
+                  <strong>51 kWh</strong>
+                  <small>ขนาดแบตเตอรี่</small>
+                </div>
+                <div>
+                  <strong>7.7 วินาที</strong>
+                  <small>0–100 กม./ชม.</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 rank-highlights p-3">
+              <h3>ลักษณะเด่น</h3>
+              <ul>
+                <li>
+                  ตัวเลือกสำหรับการเริ่มใช้ EV
+                </li>
+                <li>
+                  ขับคล่องตัว เหมาะกับในเมือง
+                </li>
+                <li>
+                  ดีไซน์สปอร์ต ทันสมัย
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="car-detail-3.html" class="btn btn-primary">ดูรายละเอียด →</a>
+                <a href="compare-7.html" class="btn btn-outline-primary">เปรียบเทียบ</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <p class="data-note">ข้อมูลอันดับและสเปกเป็นตัวอย่างตาม Mockup ภาพบางรุ่นใช้รูปแทน สามารถเปลี่ยนภายหลังได้</p>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

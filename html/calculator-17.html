@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>คำนวณเงินดาวน์–ค่างวด | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="17" class="finance-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner photo-banner short-banner" style="background-image: url(&quot;../img/01-home-banner.png&quot;);">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>วางแผนผ่อนรถที่ใช่ในงบที่พร้อม</h1>
+            <p>คำนวณเงินดาวน์และค่างวดได้ง่าย ๆ<br>ช่วยให้คุณวางแผนการเงินก่อนเป็นเจ้าของรถคันใหม่</p>
+          </div>
+        </div>
+      </section>
+      <section class="container section-space">
+        <!-- TODO: ต่อ JavaScript สำหรับฟอร์มนี้ภายหลัง ตอนนี้แสดง Layout และช่องกรอกตัวอย่างเท่านั้น -->
+        <form class="panel p-3" id="financeForm">
+          <h2>กรอกข้อมูลเพื่อคำนวณ</h2>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-center mb-3">
+            <label class="col-4 col-form-label" for="carPrice">ราคารถ (บาท)</label>
+            <div class="col-8">
+              <input class="form-control" id="carPrice" type="number" min="1" max="100000000" value="1000000" required="">
+            </div>
+          </div>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-center mb-3">
+            <label class="col-4 col-form-label" for="downPayment">เงินดาวน์ (บาท)</label>
+            <div class="col-5">
+              <input class="form-control" id="downPayment" type="number" min="0" value="200000" required="">
+            </div>
+            <div class="col-3">
+              <label class="visually-hidden" for="downPercent">เงินดาวน์เป็นเปอร์เซ็นต์</label>
+              <div class="input-group">
+                <input class="form-control" id="downPercent" type="number" min="0" max="100" step="0.01" value="20">
+                <span class="input-group-text">%</span>
+              </div>
+            </div>
+          </div>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-center mb-3">
+            <label class="col-4 col-form-label" for="interestRate">ดอกเบี้ยคงที่ต่อปี (%)</label>
+            <div class="col-8">
+              <input class="form-control" id="interestRate" type="number" min="0" max="30" step="0.01" value="3" required="">
+            </div>
+          </div>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-center mb-3">
+            <label class="col-4 col-form-label">ระยะเวลาผ่อน</label>
+            <div class="col-8">
+              <div class="month-options">
+                <label><input type="radio" name="loanMonths" value="36"><span>36</span></label>
+                <label><input type="radio" name="loanMonths" value="48"><span>48</span></label>
+                <label><input type="radio" name="loanMonths" value="60" checked=""><span>60</span></label>
+                <label><input type="radio" name="loanMonths" value="72"><span>72</span></label>
+                <span>เดือน</span>
+              </div>
+            </div>
+          </div>
+          <p id="financeError" class="text-danger" role="alert"></p>
+          <button type="button" class="btn btn-primary w-100">คำนวณค่างวด</button>
+        </form>
+        <!-- TODO: ตัวอย่างคงที่: ราคา 1,000,000 ดาวน์ 200,000 ดอกเบี้ย 3% ต่อปี 60 เดือน | เงินต้น = ราคา - ดาวน์ | ดอกเบี้ย = เงินต้น × (อัตรา/100) × (เดือน/12) | ค่างวด = (เงินต้น + ดอกเบี้ย)/เดือน ให้ต่อ JavaScript ภายหลัง -->
+        <section id="financeResult" class="panel p-3 mt-3" aria-live="polite">
+          <h2 class="h2">ผลการคำนวณ <span class="text-primary">(โดยประมาณ)</span></h2>
+          <div class="payment-highlight">
+            <h3>ค่างวดต่อเดือน</h3>
+            <p class="payment-number"><span id="monthlyPayment">15,333.33</span><small> บาท / เดือน</small></p>
+          </div>
+          <dl class="spec-list">
+            <div>
+              <dt>
+                ยอดจัดไฟแนนซ์
+              </dt>
+              <dd id="loanPrincipal">
+                800,000 บาท
+              </dd>
+            </div>
+            <div>
+              <dt>
+                ดอกเบี้ยรวมตลอดสัญญา
+              </dt>
+              <dd id="totalInterest">
+                120,000 บาท
+              </dd>
+            </div>
+            <div>
+              <dt>
+                ยอดผ่อนรวม (ไม่รวมเงินดาวน์)
+              </dt>
+              <dd id="totalPayment">
+                920,000 บาท
+              </dd>
+            </div>
+          </dl>
+          <p class="data-note">ตัวอย่างคำนวณแบบดอกเบี้ยคงที่ (Flat rate): เงินต้น × อัตราต่อปี × จำนวนปี ไม่รวมค่าธรรมเนียม ประกัน หรือภาษีที่อาจเพิ่มเติม ไม่ใช่ใบเสนอราคาหรือการอนุมัติสินเชื่อ</p>
+        </section>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

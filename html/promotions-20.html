@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>รวมโปรโมชันรถยนต์ | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="20" class="promotions-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>โปรโมชันที่ใช่ สำหรับรถคันใหม่</h1>
+            <p>รวมข้อเสนอพิเศษจากหลากหลายแบรนด์รถยนต์<br>ช่วยให้คุณเป็นเจ้าของรถได้คุ้มค่ามากขึ้น</p>
+          </div>
+        </div>
+      </section>
+      <section class="container section-space">
+        <h2 class="mb-3">โปรโมชัน</h2>
+        <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+        <div class="row g-3">
+          <div class="col-6">
+            <article class="panel overflow-hidden">
+              <img src="../img/03-car-detail-banner.png" alt="Corolla Cross" class="promo-image" loading="lazy">
+              <div class="p-3">
+                <h2 class="h3">Toyota Corolla Cross</h2>
+                <p>ตัวอย่างข้อเสนอสำหรับผู้ที่ให้ความสำคัญกับการดูแลรถ</p>
+                <details class="promo-details">
+                  <summary class="btn btn-outline-primary">ดูรายละเอียด →</summary>
+                  <div class="soft-panel p-3 mt-3">
+                    <p>ตรวจจำนวนครั้ง ระยะทาง และรายการบำรุงรักษาที่รวมในแพ็กเกจ รวมถึงวันหมดอายุของสิทธิ์</p>
+                    <a href="car-detail-3.html" class="">ดูรถรุ่นนี้ →</a>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+          <div class="col-6">
+            <article class="panel overflow-hidden">
+              <img src="../img/Car img/honda-civic.png" alt="Honda Civic" class="promo-image" loading="lazy">
+              <div class="p-3">
+                <h2 class="h3">Honda Civic</h2>
+                <p>ตัวอย่างแพ็กเกจดูแลรถและบริการหลังส่งมอบ ตรวจสอบรายละเอียดกับผู้จำหน่าย</p>
+                <details class="promo-details">
+                  <summary class="btn btn-outline-primary">ดูรายละเอียด →</summary>
+                  <div class="soft-panel p-3 mt-3">
+                    <p>สอบถามขอบเขตบริการ ระยะเวลา และรายการที่รวมในแพ็กเกจจากใบเสนอราคา</p>
+                    <a href="car-detail-3.html" class="">ดูรถรุ่นนี้ →</a>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </div>
+        </div>
+        <section class="panel p-3 mt-3">
+          <h2 class="h4">ก่อนเลือกโปรโมชัน ควรตรวจอะไรบ้าง</h2>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3">
+            <div class="col-6">
+              <h3>เปรียบเทียบยอดที่ต้องจ่ายจริง</h3>
+              <p>ดูราคารถ เงินดาวน์ ดอกเบี้ย ประกัน และค่าธรรมเนียมร่วมกัน ไม่พิจารณาเพียงของแถมหรือค่างวดที่แสดง</p>
+              <a href="calculator-17.html" class="">ลองคำนวณเงินดาวน์–ค่างวด →</a>
+            </div>
+            <div class="col-6">
+              <h3>ขอเงื่อนไขเป็นเอกสาร</h3>
+              <p>ตรวจรุ่นย่อย ระยะเวลา สิทธิ์ที่ได้รับ และเงื่อนไขคืนเงินจองในใบเสนอราคาให้ครบถ้วน</p>
+              <a href="showrooms-5.html" class="">ค้นหาโชว์รูม →</a>
+            </div>
+          </div>
+        </section>
+        <p class="data-note mt-0">โปรโมชันจำลองสำหรับโครงงาน ไม่มีผลผูกพันกับผู้จำหน่าย และไม่สามารถจองหรือรับสิทธิ์ผ่านเว็บไซต์นี้</p>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>คู่มือเช็กรถก่อนรับรถ | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="18" class="checklist-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner photo-banner short-banner" style="background-image: url(&quot;../img/10-read-banner.png&quot;);">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>ขั้นตอนการเช็กรถให้ครบ ก่อนรับ</h1>
+            <p>ตรวจสอบรายละเอียดสำคัญก่อนรับรถ เพื่อความมั่นใจให้คุณได้รถที่พร้อมใช้งาน</p>
+          </div>
+        </div>
+      </section>
+      <section class="container section-space">
+        <div class="d-flex justify-content-between gap-3 mb-2">
+          <h2 class="h5">ความคืบหน้าการตรวจ</h2>
+          <span id="checkCount" aria-live="polite">ตรวจแล้ว 0 / 24 ข้อ</span>
+        </div>
+        <!-- TODO: อัปเดตความกว้าง progress-bar และจำนวนข้อเมื่อเขียน JavaScript -->
+        <div class="progress mb-3" role="progressbar" aria-label="ความคืบหน้าการตรวจรถ" aria-valuenow="0" aria-valuemin="0" aria-valuemax="24" id="checkProgress" hidden="">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="panel p-3">
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-start">
+            <div class="col-6">
+              <img src="../img/Car img/car-paint-inspection.png" alt="ภาพประกอบการตรวจสีรถ" class="w-100 rounded" loading="lazy">
+            </div>
+            <div class="col-6">
+              <h2 id="checkTitle" class="h3">ขั้นที่ 1 ตัวถังและสี</h2>
+              <div id="checkItems">
+                <label class="check-item"><input type="checkbox" class="form-check-input"><span>ตรวจรอยขีดข่วนและรอยบุบรอบคัน<small>สำรวจรอยขีดข่วน รอยบุบ หรือความเสียหายของตัวถัง</small></span></label>
+                <label class="check-item"><input type="checkbox" class="form-check-input"><span>ตรวจสีแต่ละชิ้นในแสงที่เพียงพอ<small>เช็กว่าสีไม่มีความแตกต่างหรือร่องรอยพ่นสี</small></span></label>
+                <label class="check-item"><input type="checkbox" class="form-check-input"><span>ตรวจช่องไฟของประตูและฝากระโปรง<small>ตรวจแนวประตูและฝากระโปรงให้สม่ำเสมอ</small></span></label>
+                <label class="check-item"><input type="checkbox" class="form-check-input"><span>เปิด–ปิดประตูและฝาท้ายทุกบาน<small>เปิด–ปิดได้อย่างราบรื่น ไม่มีเสียงผิดปกติ</small></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+          <button id="checkBack" type="button" class="btn btn-outline-primary" disabled="">ย้อนกลับ</button>
+          <!-- TODO: เพิ่มอีก 5 หมวด: กระจก/ยาง/ล้อ, ห้องโดยสาร, ระบบไฟ, การทำงานของรถ, เอกสาร/การส่งมอบ หมวดละ 4 ข้อ แล้วนับความคืบหน้าและบันทึกด้วย JavaScript -->
+          <button id="checkNext" type="button" class="btn btn-primary">หัวข้อถัดไป →</button>
+        </div>
+        <div id="checkSummary" class="soft-panel p-3 mt-3" hidden="" tabindex="-1"></div>
+        <button type="button" id="checkReset" class="text-button mt-3">ล้างรายการตรวจทั้งหมด</button>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

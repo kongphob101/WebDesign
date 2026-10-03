@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>รายละเอียดรถ | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="3" class="detail-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <nav class="breadcrumb-line container" aria-label="เส้นทาง">
+        <a href="index-1.html">หน้าแรก</a>
+        <span>/</span>
+        <span>สำรวจรถ / รายละเอียดรถ</span>
+      </nav>
+      <section class="container pb-5">
+        <div class="panel p-3">
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3">
+            <div class="col-7 detail-gallery">
+              <img id="detailImage" class="detail-image" src="../img/03-car-detail-banner.png" alt="Toyota Corolla Cross">
+              <!-- TODO: เพิ่ม JavaScript ให้กดภาพเล็กแล้วเปลี่ยน #detailImage -->
+              <div class="gallery-thumbs mt-3" id="galleryThumbs">
+                <button type="button" class="gallery-thumb" aria-label="ภาพรถ 1"><img src="../img/04-brand-banner.png" alt="ภาพประกอบรถ" class="" loading="lazy"></button>
+                <button type="button" class="gallery-thumb" aria-label="ภาพรถ 2"><img src="../img/10-read-banner.png" alt="ภาพประกอบรถ" class="" loading="lazy"></button>
+                <button type="button" class="gallery-thumb" aria-label="ภาพรถ 3"><img src="../img/03-car-detail-banner.png" alt="ภาพประกอบรถ" class="" loading="lazy"></button>
+                <button type="button" class="gallery-thumb" aria-label="ภาพรถ 4"><img src="../img/09-articles-banner.png" alt="ภาพประกอบรถ" class="" loading="lazy"></button>
+                <button type="button" class="gallery-thumb" aria-label="ภาพรถ 5"><img src="../img/15-event-detail-banner.png" alt="ภาพประกอบรถ" class="" loading="lazy"></button>
+              </div>
+            </div>
+            <div class="col-5 detail-summary">
+              <p id="detailBrand" class="mb-1">Toyota</p>
+              <h1 id="detailName" class="h2">Corolla Cross</h1>
+              <h2 class="h4">ชีวิตไปได้ไกลกว่า ในแบบของคุณ</h2>
+              <p id="detailDescription">SUV ยอดนิยมที่ผสานความสะดวกสบาย ความปลอดภัย และประหยัด ตอบโจทย์การเดินทางของครอบครัวยุคใหม่</p>
+              <p class="h4">เริ่มต้น <strong id="detailPrice" class="text-primary">989,000 บาท</strong></p>
+              <div class="d-flex flex-wrap gap-2 my-3">
+                <!-- TODO: เชื่อมปุ่มบันทึกรถกับ localStorage ภายหลัง -->
+                <button id="detailSave" type="button" data-save="cross" aria-pressed="false" class="btn btn-outline-primary flex-fill">♡ บันทึก</button>
+                <a href="compare-7.html" id="detailCompare" class="btn btn-primary flex-fill">เปรียบเทียบ</a>
+              </div>
+              <h2 class="h5">เลือกรุ่นย่อย</h2>
+              <!-- TODO: radio เลือกสีได้ด้วย CSS หากต้องการอัปเดตราคา/รายละเอียดให้เขียน JavaScript เพิ่ม -->
+              <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+              <div id="trimButtons" class="row g-2 g-3">
+                <div class="col-4">
+                  <label class="trim-button"><input class="visually-hidden" type="radio" name="trim" value="0" checked=""><span>HEV Smart</span><strong>989,000 บาท</strong></label>
+                </div>
+                <div class="col-4">
+                  <label class="trim-button"><input class="visually-hidden" type="radio" name="trim" value="1"><span>HEV Premium</span><strong>1,094,000 บาท</strong></label>
+                </div>
+                <div class="col-4">
+                  <label class="trim-button"><input class="visually-hidden" type="radio" name="trim" value="2"><span>HEV Premium Luxury</span><strong>1,204,000 บาท</strong></label>
+                </div>
+              </div>
+              <a href="#trims" class="small d-block text-end mt-2">ดูตารางรุ่นย่อย ↓</a>
+            </div>
+          </div>
+          <nav class="section-tabs mt-3" aria-label="หัวข้อรายละเอียดรถ">
+            <a href="#overview">ภาพรวม</a>
+            <a href="#trims">รุ่นย่อย</a>
+            <a href="#specs">สเปก</a>
+            <a href="#safety">ความปลอดภัย</a>
+            <a href="#showroom">โชว์รูม</a>
+          </nav>
+          <section id="overview" class="pt-4">
+            <h2 class="h4" id="overviewTitle">SUV ที่ใช่สำหรับทุกเส้นทางของชีวิต</h2>
+            <p id="overviewText">Toyota Corolla Cross ผสานดีไซน์ที่ทันสมัย เทคโนโลยีไฮบริดที่ประหยัด และพื้นที่ใช้สอยที่ลงตัวให้คุณออกไปใช้ชีวิตได้มากกว่าในทุกวัน</p>
+            <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+            <div id="detailFeatures" class="row g-3 my-3">
+              <div class="col-3">
+                <div class="feature">
+                  <span class="feature-icon" aria-hidden="true">◎</span>
+                  <strong>ประหยัดน้ำมัน</strong>
+                  <p>เทคโนโลยีไฮบริด</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="feature">
+                  <span class="feature-icon" aria-hidden="true">▥</span>
+                  <strong>พื้นที่กว้างขวาง</strong>
+                  <p>ตอบโจทย์ครอบครัว</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="feature">
+                  <span class="feature-icon" aria-hidden="true">✓</span>
+                  <strong>Toyota Safety Sense</strong>
+                  <p>มั่นใจทุกเส้นทาง</p>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="feature">
+                  <span class="feature-icon" aria-hidden="true">✓</span>
+                  <strong>ดีไซน์พรีเมียม</strong>
+                  <p>ดูดีในทุกมุมมอง</p>
+                </div>
+              </div>
+            </div>
+            <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+            <div class="row g-3">
+              <div class="col-6">
+                <a class="story-card story-horizontal" href="article-10.html"><img src="../img/10-read-banner.png" alt="รถคันแรก เริ่มเลือกจากชีวิตประจำวัน" class="" loading="lazy"><div class="p-3"><span class="eyebrow">มือใหม่</span><h3>รถคันแรก เริ่มเลือกจากชีวิตประจำวัน</h3><p>ก่อนดูยี่ห้อหรือรุ่น ลองเริ่มจากเส้นทางที่ใช้ จำนวนผู้โดยสาร และงบที่พร้อมจ่าย</p><span class="read-more">อ่านบทความ →</span></div></a>
+              </div>
+              <div class="col-6">
+                <a class="story-card story-horizontal" href="article-10.html"><img src="../img/04-brand-banner.png" alt="อ่านรุ่นย่อยอย่างไร ให้จ่ายกับสิ่งที่ใช้จริง" class="" loading="lazy"><div class="p-3"><span class="eyebrow">เลือกรถ</span><h3>อ่านรุ่นย่อยอย่างไร ให้จ่ายกับสิ่งที่ใช้จริง</h3><p>ชื่อรุ่นย่อยอาจดูคล้ายกัน แต่อุปกรณ์ที่ให้มาและราคาต่างกันได้มาก</p><span class="read-more">อ่านบทความ →</span></div></a>
+              </div>
+            </div>
+          </section>
+          <section id="trims" class="mt-3">
+            <h2 class="h4">เปรียบเทียบรุ่นย่อย</h2>
+            <p class="small">เลื่อนตารางซ้าย–ขวาเพื่อดูข้อมูลครบทุกคอลัมน์</p>
+            <div class="table-responsive" tabindex="0" aria-label="ตารางรุ่นย่อยเลื่อนแนวนอนได้">
+              <table class="table comparison-table" id="trimTable">
+                <caption class="visually-hidden">
+                  เปรียบเทียบรุ่นย่อย Toyota Corolla Cross
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">ข้อมูลสำคัญ</th>
+                    <th scope="col">HEV Smart</th>
+                    <th scope="col">HEV Premium</th>
+                    <th scope="col">HEV Premium Luxury</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">ราคา (บาท)</th>
+                    <td>989,000</td>
+                    <td>1,094,000</td>
+                    <td>1,204,000</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">พลังงาน</th>
+                    <td>ไฮบริด</td>
+                    <td>ไฮบริด</td>
+                    <td>ไฮบริด</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">จำนวนที่นั่ง</th>
+                    <td>5 ที่นั่ง</td>
+                    <td>5 ที่นั่ง</td>
+                    <td>5 ที่นั่ง</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ระบบเกียร์</th>
+                    <td>อัตโนมัติ</td>
+                    <td>อัตโนมัติ</td>
+                    <td>อัตโนมัติ</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">อุปกรณ์เฉพาะรุ่น</th>
+                    <td>ตรวจสอบกับผู้จำหน่าย</td>
+                    <td>ตรวจสอบกับผู้จำหน่าย</td>
+                    <td>ตรวจสอบกับผู้จำหน่าย</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="detail-extra">
+            <details id="specs">
+              <summary>ข้อมูลสเปกเพิ่มเติม</summary>
+              <p>ตัวถัง SUV · 5 ที่นั่ง · ยาว 4,460 มม. · กว้าง 1,825 มม.</p>
+            </details>
+            <details id="safety">
+              <summary>ความปลอดภัย</summary>
+              <p>Toyota Safety Sense — ตรวจอุปกรณ์ของรุ่นย่อยกับผู้จำหน่ายอีกครั้ง</p>
+            </details>
+          </div>
+          <section id="showroom" class="d-flex flex-wrap justify-content-between align-items-center gap-3 mt-3">
+            <div>
+              <h2 class="h5 mb-1">ไปลองนั่งและดูรถจริง</h2>
+              <p class="mb-0">ค้นหาโชว์รูมเพื่อสอบถามรายละเอียดกับผู้จำหน่าย</p>
+            </div>
+            <a href="showrooms-5.html" class="btn btn-primary">ค้นหาโชว์รูม</a>
+          </section>
+          <p class="data-note">ข้อมูลและราคาเป็นตัวอย่างสำหรับโครงงาน กรุณาตรวจสอบกับผู้ผลิตหรือผู้จำหน่ายก่อนตัดสินใจ</p>
+        </div>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

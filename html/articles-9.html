@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>บทความเรื่องรถ | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="9" class="articles-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="container section-space articles-layout">
+        <!-- หัวข้อ 8 ส่วน + ช่องค้นหา 4 ส่วน -->
+        <div class="row g-3 align-items-center">
+          <div class="col-8">
+            <h1>เรื่องรถ เข้าใจง่าย</h1>
+            <p class="page-lead">อัปเดตความรู้ และเทคนิคการใช้รถ จากทีมงาน CarGuy</p>
+          </div>
+          <div class="col-4">
+            <label for="articleSearch" class="visually-hidden">ค้นหาบทความ</label>
+            <input id="articleSearch" type="search" class="form-control" placeholder="ค้นหาบทความ เช่น รถไฟฟ้า, ดูแลรถ, SUV">
+          </div>
+        </div>
+        <!-- TODO: เชื่อมตัวกรองหมวดและคำค้นด้วย JavaScript ภายหลัง -->
+        <div class="category-tabs">
+          <button type="button" class="btn btn-primary">ทั้งหมด</button>
+          <button type="button" class="btn btn-outline-primary">คู่มือ</button>
+          <button type="button" class="btn btn-outline-primary">รีวิว</button>
+          <button type="button" class="btn btn-outline-primary">ความรู้</button>
+        </div>
+        <!-- บทความเด่น: col-6 + col-6; ขวามีการ์ดแนวนอน 2 ใบ -->
+        <div class="row g-3 mt-0" id="articleGrid">
+          <div class="col-6">
+            <a href="article-10.html" class="story-card "><img src="../img/09-articles-banner.png" alt="Toyota RAV4 Hybrid: SUV ที่ลงตัวในทุกเส้นทาง" class="" loading="lazy"><div class="p-3"><span class="eyebrow">รีวิว</span><h3>Toyota RAV4 Hybrid: SUV ที่ลงตัวในทุกเส้นทาง</h3><p>รีวิวแนวคิดการใช้งาน พื้นที่โดยสาร และสิ่งที่ควรพิจารณาก่อนเลือกรถ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+          </div>
+          <div class="col-6 article-side">
+            <div>
+              <a href="article-10.html" class="story-card story-horizontal"><img src="../img/Car img/byd-atto-3.png" alt="รถไฟฟ้า (EV) ชาร์จยังไงให้คุ้ม" class="" loading="lazy"><div class="p-3"><span class="eyebrow">ความรู้</span><h3>รถไฟฟ้า (EV) ชาร์จยังไงให้คุ้ม</h3><p>รวมเรื่องต้องรู้ก่อนใช้รถไฟฟ้า ตั้งแต่หัวชาร์จถึงการวางแผนใช้งาน</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+            <div>
+              <a href="article-10.html" class="story-card story-horizontal"><img src="../img/Car img/car-paint-inspection.png" alt="5 เทคนิคดูแลรถช่วงหน้าร้อน" class="" loading="lazy"><div class="p-3"><span class="eyebrow">คู่มือ</span><h3>5 เทคนิคดูแลรถช่วงหน้าร้อน</h3><p>ดูแลรถให้พร้อมก่อนเดินทาง และสังเกตอาการที่ควรตรวจเพิ่มเติม</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+          </div>
+        </div>
+        <section class="latest-articles">
+          <div class="section-heading d-flex justify-content-between align-items-center">
+            <h2>บทความล่าสุด</h2>
+            <a href="article-10.html">ดูบทความทั้งหมด →</a>
+          </div>
+          <div class="row g-3">
+            <div class="col-3">
+              <a href="article-10.html" class="story-card "><img src="../img/Car img/honda-civic.png" alt="เลือกรถคันแรกอย่างไร" class="" loading="lazy"><div class="p-3"><span class="eyebrow">คู่มือ</span><h3>เลือกรถคันแรกอย่างไร</h3><p>อ่านเคล็ดลับและข้อควรพิจารณาก่อนใช้รถ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+            <div class="col-3">
+              <a href="article-10.html" class="story-card "><img src="../img/04-brand-banner.png" alt="เทคโนโลยีความปลอดภัยที่ควรรู้" class="" loading="lazy"><div class="p-3"><span class="eyebrow">ความรู้</span><h3>เทคโนโลยีความปลอดภัยที่ควรรู้</h3><p>อ่านเคล็ดลับและข้อควรพิจารณาก่อนใช้รถ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+            <div class="col-3">
+              <a href="article-10.html" class="story-card "><img src="../img/Car img/byd-atto-3.png" alt="BYD ATTO 3 กับชีวิตประจำวัน" class="" loading="lazy"><div class="p-3"><span class="eyebrow">รีวิว</span><h3>BYD ATTO 3 กับชีวิตประจำวัน</h3><p>อ่านเคล็ดลับและข้อควรพิจารณาก่อนใช้รถ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+            <div class="col-3">
+              <a href="article-10.html" class="story-card "><img src="../img/10-read-banner.png" alt="ขับรถทางไกลอย่างมั่นใจ" class="" loading="lazy"><div class="p-3"><span class="eyebrow">คู่มือ</span><h3>ขับรถทางไกลอย่างมั่นใจ</h3><p>อ่านเคล็ดลับและข้อควรพิจารณาก่อนใช้รถ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+          </div>
+        </section>
+        <div class="soft-panel p-3 d-flex flex-wrap gap-3 justify-content-between align-items-center mt-3">
+          <div>
+            <h3>พบกับกิจกรรมและอีเวนต์เรื่องรถ</h3>
+            <p class="mb-0">อัปเดตงานเปิดตัวรถ งานมอเตอร์โชว์ และกิจกรรมพิเศษ</p>
+          </div>
+          <a href="events-14.html" class="btn btn-primary">ดูปฏิทินงานรถยนต์ →</a>
+        </div>
+        <div class="tool-links">
+          <a href="calculator-17.html">คำนวณค่างวด</a>
+          <a href="checklist-18.html">คู่มือเช็กรถก่อนรับ</a>
+          <a href="reviews-19.html">รีวิวจากเจ้าของรถ</a>
+        </div>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

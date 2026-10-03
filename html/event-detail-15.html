@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>รายละเอียด Motor Show | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="15" class="event-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner photo-banner event-hero" style="background-image: url(&quot;../img/15-event-detail-banner.png&quot;);">
+        <div class="container">
+          <div class="banner-copy">
+            <h1><span id="eventTitle">Bangkok International<br>Motor Show 2026</span></h1>
+            <p><span id="eventDate">25 มีนาคม – 5 เมษายน 2569 · กำหนดการตัวอย่าง</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="container section-space">
+        <div class="panel p-3">
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-center">
+            <div class="col-5">
+              <img src="../img/Car img/byd-atto-3.png" alt="บรรยากาศงานแสดงรถยนต์" class="event-content-image" loading="lazy">
+            </div>
+            <div class="col-7">
+              <h2 class="accent-heading">ดูรถจริง เปรียบเทียบให้ชัด<br>ก่อนเลือกรถที่ใช่</h2>
+              <p>ใช้โอกาสนี้ลองนั่งรถหลายรุ่น ดูพื้นที่โดยสาร การเก็บสัมภาระ และถามรายละเอียดอุปกรณ์ของรุ่นย่อยที่สนใจในวันเดียว</p>
+              <p id="eventVenue">สถานที่ตัวอย่าง: IMPACT เมืองทองธานี</p>
+            </div>
+          </div>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3 align-items-center mt-3">
+            <div class="col-7">
+              <h2 class="accent-heading">เตรียมตัวก่อนเดินงาน</h2>
+              <p>เลือกรถที่อยากดูไว้ 2–3 รุ่น จดงบประมาณและคำถามของคุณ เตรียมรองเท้าที่เดินสบาย และตรวจสอบเวลาเปิดงานกับผู้จัดก่อนเดินทาง</p>
+              <p>ก่อนจองรถ อ่านใบเสนอราคา เงื่อนไขการจอง และรายการของแถมให้ครบถ้วน</p>
+            </div>
+            <div class="col-5">
+              <img src="../img/11-ev-hub-banner.png" alt="ภาพประกอบการดูรถ" class="event-content-image" loading="lazy">
+            </div>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mt-3">
+            <a href="compare-7.html" class="btn btn-primary">เตรียมรถไปเปรียบเทียบ</a>
+            <a href="events-14.html" class="btn btn-outline-primary">กลับไปปฏิทิน</a>
+          </div>
+          <p class="data-note mt-0" id="eventNotice">เนื้อหาและกำหนดการจำลองสำหรับโครงงาน</p>
+        </div>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

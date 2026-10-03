@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>EV Hub | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="11" class="ev-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>เข้าใจ EV ก่อนเลือกคันที่ใช่</h1>
+            <p>ครบทุกเรื่องที่คุณควรรู้ ทั้งเทคโนโลยี การใช้งาน การชาร์จ<br>และเทรนด์อนาคต เพื่อให้การเลือก EV เป็นเรื่องที่ง่ายขึ้น</p>
+          </div>
+        </div>
+      </section>
+      <section class="container section-space">
+        <!-- บทความ col-8 และหมวดความรู้ col-4 -->
+        <div class="row g-3">
+          <section class="col-8">
+            <div class="section-heading d-flex justify-content-between align-items-center">
+              <h2>บทความล่าสุด</h2>
+              <a href="articles-9.html">ดูบทความทั้งหมด →</a>
+            </div>
+            <div class="ev-stories">
+              <a href="article-10.html" class="story-card story-horizontal"><img src="../img/13-charging-banner.png" alt="วิธีชาร์จรถยนต์ไฟฟ้าอย่างถูกต้องและปลอดภัย" class="" loading="lazy"><div class="p-3"><span class="eyebrow">ความรู้ EV</span><h3>วิธีชาร์จรถยนต์ไฟฟ้าอย่างถูกต้องและปลอดภัย</h3><p>เข้าใจพื้นฐานก่อนเลือกใช้งาน และตรวจสอบข้อมูลรุ่นที่สนใจ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+              <a href="article-10.html" class="story-card story-horizontal"><img src="../img/13-charging-banner.png" alt="รีวิว SUV ไฟฟ้า สำหรับการใช้ชีวิตประจำวัน" class="" loading="lazy"><div class="p-3"><span class="eyebrow">รีวิวและทดสอบขับ</span><h3>รีวิว SUV ไฟฟ้า สำหรับการใช้ชีวิตประจำวัน</h3><p>เข้าใจพื้นฐานก่อนเลือกใช้งาน และตรวจสอบข้อมูลรุ่นที่สนใจ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+              <a href="article-10.html" class="story-card story-horizontal"><img src="../img/13-charging-banner.png" alt="แบตเตอรี่รถยนต์ไฟฟ้า ทำงานอย่างไร" class="" loading="lazy"><div class="p-3"><span class="eyebrow">เทคโนโลยี EV</span><h3>แบตเตอรี่รถยนต์ไฟฟ้า ทำงานอย่างไร</h3><p>เข้าใจพื้นฐานก่อนเลือกใช้งาน และตรวจสอบข้อมูลรุ่นที่สนใจ</p><span class="read-more">อ่านเพิ่มเติม →</span></div></a>
+            </div>
+          </section>
+          <aside class="col-4 ev-learning">
+            <h2>เรียนรู้เรื่อง EV</h2>
+            <a href="article-10.html" class="ev-topic"><img src="../img/13-charging-banner.png" alt="การชาร์จ" class="" loading="lazy"><div><h3>การชาร์จ</h3><p>พื้นฐานการใช้งานและสิ่งที่ควรรู้</p></div><span>›</span></a>
+            <a href="article-10.html" class="ev-topic"><img src="../img/Car img/byd-atto-3.png" alt="แบตเตอรี่" class="" loading="lazy"><div><h3>แบตเตอรี่</h3><p>พื้นฐานการใช้งานและสิ่งที่ควรรู้</p></div><span>›</span></a>
+            <a href="article-10.html" class="ev-topic"><img src="../img/11-ev-hub-banner.png" alt="เทคโนโลยีและสมรรถนะ" class="" loading="lazy"><div><h3>เทคโนโลยีและสมรรถนะ</h3><p>พื้นฐานการใช้งานและสิ่งที่ควรรู้</p></div><span>›</span></a>
+          </aside>
+        </div>
+        <section class="mt-3">
+          <h2>สำรวจเพิ่มเติม</h2>
+          <div class="row g-3">
+            <div class="col-4">
+              <a class="ev-topic" href="best-ev-12.html"><img src="../img/12-best-ev-banner.png" alt="รถยนต์ไฟฟ้ายอดนิยม" class="" loading="lazy"><div><h3>รถยนต์ไฟฟ้ายอดนิยม</h3><p>ดูข้อมูลเพิ่มเติม →</p></div></a>
+            </div>
+            <div class="col-4">
+              <a class="ev-topic" href="charging-13.html"><img src="../img/13-charging-banner.png" alt="แผนที่จุดชาร์จ EV" class="" loading="lazy"><div><h3>แผนที่จุดชาร์จ EV</h3><p>ดูข้อมูลเพิ่มเติม →</p></div></a>
+            </div>
+            <div class="col-4">
+              <a class="ev-topic" href="car-search-2.html"><img src="../img/11-ev-hub-banner.png" alt="สำรวจ EV ทั้งหมด" class="" loading="lazy"><div><h3>สำรวจ EV ทั้งหมด</h3><p>ดูข้อมูลเพิ่มเติม →</p></div></a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

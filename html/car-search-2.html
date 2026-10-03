@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>สำรวจรถ | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="2" class="search-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner photo-banner short-banner" style="background-image: url(&quot;../img/16-about-banner.png&quot;);">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>ค้นหารถที่เหมาะกับคุณ</h1>
+            <p>สำรวจรถยนต์หลากหลายรุ่น จากทุกแบรนด์ชั้นนำ<br>เปรียบเทียบสเปก ราคา และค้นหารถที่ใช่ ในแบบของคุณ</p>
+          </div>
+        </div>
+      </section>
+      <nav class="breadcrumb-line container" aria-label="เส้นทาง">
+        <a href="index-1.html">หน้าแรก</a>
+        <span>/</span>
+        <span>สำรวจรถ</span>
+      </nav>
+      <section class="container pb-5">
+        <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+        <div class="row g-3">
+          <aside class="col-3">
+            <!-- TODO: ต่อ JavaScript สำหรับฟอร์มนี้ภายหลัง ตอนนี้แสดง Layout และช่องกรอกตัวอย่างเท่านั้น -->
+            <!-- TODO: กรอง .car-result ตามค่าแบรนด์ ประเภท พลังงาน และราคา แล้วอัปเดต #resultCount -->
+            <form id="carFilters" class="panel p-3">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 mb-0">ตัวกรอง</h2>
+                <button type="reset" class="text-button small">ล้างตัวกรอง</button>
+              </div>
+              <label for="searchCar" class="visually-hidden">ค้นหารถ</label>
+              <input type="search" class="form-control mb-3" id="searchCar" placeholder="คำค้นหา">
+              <details class="filter-section">
+                <summary>แบรนด์</summary>
+                <label class="visually-hidden" for="filter-brand">แบรนด์</label>
+                <select id="filter-brand" class="form-select mb-3">
+                  <option>ทุกแบรนด์</option>
+                  <option>Toyota</option>
+                  <option>Honda</option>
+                  <option>BYD</option>
+                </select>
+              </details>
+              <details class="filter-section">
+                <summary>ช่วงราคา</summary>
+                <label class="visually-hidden" for="filter-price">ช่วงราคา</label>
+                <select id="filter-price" class="form-select mb-3">
+                  <option>ทุกราคา</option>
+                  <option>ไม่เกิน 1,000,000 บาท</option>
+                  <option>1,000,000–1,500,000 บาท</option>
+                </select>
+              </details>
+              <details class="filter-section">
+                <summary>ปี</summary>
+                <label class="visually-hidden" for="filter-year">ปี</label>
+                <select id="filter-year" class="form-select mb-3">
+                  <option>ทุกปี</option>
+                  <option>2026</option>
+                  <option>2025</option>
+                  <option>2024</option>
+                </select>
+              </details>
+              <details class="filter-section">
+                <summary>ระบบเกียร์</summary>
+                <label class="visually-hidden" for="filter-gear">ระบบเกียร์</label>
+                <select id="filter-gear" class="form-select mb-3">
+                  <option>ทั้งหมด</option>
+                  <option>อัตโนมัติ</option>
+                  <option>ธรรมดา</option>
+                </select>
+              </details>
+              <details class="filter-section">
+                <summary>ประเภทรถ</summary>
+                <label class="visually-hidden" for="filter-type">ประเภทรถ</label>
+                <select id="filter-type" class="form-select mb-3">
+                  <option>ทั้งหมด</option>
+                  <option>SUV</option>
+                  <option>Sedan</option>
+                </select>
+              </details>
+              <details class="filter-section">
+                <summary>ประเภทเชื้อเพลิง</summary>
+                <label class="visually-hidden" for="filter-power">ประเภทเชื้อเพลิง</label>
+                <select id="filter-power" class="form-select mb-3">
+                  <option>ทั้งหมด</option>
+                  <option>ไฮบริด</option>
+                  <option>ไฟฟ้า</option>
+                </select>
+              </details>
+              <!-- TODO: กรองรายการและอัปเดตจำนวนรถเมื่อกดปุ่มนี้ -->
+              <button type="button" class="btn btn-primary w-100 mt-3">แสดงผลลัพธ์</button>
+            </form>
+          </aside>
+          <div class="col-9 search-results">
+            <div class="d-flex flex-wrap justify-content-between gap-3 align-items-center mb-3">
+              <h2 class="h5 mb-0" id="resultCount">พบรถยนต์ 6 คัน</h2>
+            </div>
+            <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+            <div id="carResults" class="row g-3">
+              <div class="col-4 car-result">
+                <article class="car-card" data-car="cross" data-brand="Toyota" data-type="SUV" data-power="ไฮบริด" data-price="989000">
+                  <a href="car-detail-3.html" class="car-image"><img src="../img/03-car-detail-banner.png" alt="Toyota Corolla Cross" class="" loading="lazy"><!-- TODO: เชื่อมปุ่มหัวใจกับรายการบันทึก --><span class="save-symbol" aria-hidden="true">♡</span></a>
+                  <div class="car-card-body">
+                    <a class="car-name" href="car-detail-3.html">Toyota Corolla Cross</a>
+                    <strong>เริ่ม 989,000 บาท</strong>
+                    <p class="small mb-2">HEV Smart · ไฮบริด</p>
+                    <div class="card-actions">
+                      <label class="d-flex gap-1 align-items-center"><input type="checkbox" class="form-check-input mt-0" aria-label="เลือกเปรียบเทียบรถ 1">เปรียบเทียบ</label>
+                      <a href="car-detail-3.html">ดูรายละเอียด →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4 car-result">
+                <article class="car-card" data-car="camry" data-brand="Toyota" data-type="Sedan" data-power="ไฮบริด" data-price="1475000">
+                  <a href="car-detail-3.html" class="car-image"><img src="../img/Car img/toyota-camry.png" alt="Toyota Camry" class="" loading="lazy"><!-- TODO: เชื่อมปุ่มหัวใจกับรายการบันทึก --><span class="save-symbol" aria-hidden="true">♡</span></a>
+                  <div class="car-card-body">
+                    <a class="car-name" href="car-detail-3.html">Toyota Camry</a>
+                    <strong>เริ่ม 1,475,000 บาท</strong>
+                    <p class="small mb-2">HEV Smart · ไฮบริด</p>
+                    <div class="card-actions">
+                      <label class="d-flex gap-1 align-items-center"><input type="checkbox" class="form-check-input mt-0" aria-label="เลือกเปรียบเทียบรถ 2">เปรียบเทียบ</label>
+                      <a href="car-detail-3.html">ดูรายละเอียด →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4 car-result">
+                <article class="car-card" data-car="civic" data-brand="Honda" data-type="Sedan" data-power="ไฮบริด" data-price="1099000">
+                  <a href="car-detail-3.html" class="car-image"><img src="../img/Car img/honda-civic.png" alt="Honda Civic" class="" loading="lazy"><!-- TODO: เชื่อมปุ่มหัวใจกับรายการบันทึก --><span class="save-symbol" aria-hidden="true">♡</span></a>
+                  <div class="car-card-body">
+                    <a class="car-name" href="car-detail-3.html">Honda Civic</a>
+                    <strong>เริ่ม 1,099,000 บาท</strong>
+                    <p class="small mb-2">e:HEV EL+ · ไฮบริด</p>
+                    <div class="card-actions">
+                      <label class="d-flex gap-1 align-items-center"><input type="checkbox" class="form-check-input mt-0" aria-label="เลือกเปรียบเทียบรถ 3">เปรียบเทียบ</label>
+                      <a href="car-detail-3.html">ดูรายละเอียด →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4 car-result">
+                <article class="car-card" data-car="atto" data-brand="BYD" data-type="SUV" data-power="ไฟฟ้า" data-price="899900">
+                  <a href="car-detail-3.html" class="car-image"><img src="../img/Car img/byd-atto-3.png" alt="BYD ATTO 3" class="" loading="lazy"><!-- TODO: เชื่อมปุ่มหัวใจกับรายการบันทึก --><span class="save-symbol" aria-hidden="true">♡</span></a>
+                  <div class="car-card-body">
+                    <a class="car-name" href="car-detail-3.html">BYD ATTO 3</a>
+                    <strong>เริ่ม 899,900 บาท</strong>
+                    <p class="small mb-2">Premium · ไฟฟ้า</p>
+                    <div class="card-actions">
+                      <label class="d-flex gap-1 align-items-center"><input type="checkbox" class="form-check-input mt-0" aria-label="เลือกเปรียบเทียบรถ 4">เปรียบเทียบ</label>
+                      <a href="car-detail-3.html">ดูรายละเอียด →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4 car-result">
+                <article class="car-card" data-car="cross" data-brand="Toyota" data-type="SUV" data-power="ไฮบริด" data-price="989000">
+                  <a href="car-detail-3.html" class="car-image"><img src="../img/03-car-detail-banner.png" alt="Toyota Corolla Cross" class="" loading="lazy"><!-- TODO: เชื่อมปุ่มหัวใจกับรายการบันทึก --><span class="save-symbol" aria-hidden="true">♡</span></a>
+                  <div class="car-card-body">
+                    <a class="car-name" href="car-detail-3.html">Toyota Corolla Cross</a>
+                    <strong>เริ่ม 989,000 บาท</strong>
+                    <p class="small mb-2">HEV Smart · ไฮบริด</p>
+                    <div class="card-actions">
+                      <label class="d-flex gap-1 align-items-center"><input type="checkbox" class="form-check-input mt-0" aria-label="เลือกเปรียบเทียบรถ 5">เปรียบเทียบ</label>
+                      <a href="car-detail-3.html">ดูรายละเอียด →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-4 car-result">
+                <article class="car-card" data-car="camry" data-brand="Toyota" data-type="Sedan" data-power="ไฮบริด" data-price="1475000">
+                  <a href="car-detail-3.html" class="car-image"><img src="../img/Car img/toyota-camry.png" alt="Toyota Camry" class="" loading="lazy"><!-- TODO: เชื่อมปุ่มหัวใจกับรายการบันทึก --><span class="save-symbol" aria-hidden="true">♡</span></a>
+                  <div class="car-card-body">
+                    <a class="car-name" href="car-detail-3.html">Toyota Camry</a>
+                    <strong>เริ่ม 1,475,000 บาท</strong>
+                    <p class="small mb-2">HEV Smart · ไฮบริด</p>
+                    <div class="card-actions">
+                      <label class="d-flex gap-1 align-items-center"><input type="checkbox" class="form-check-input mt-0" aria-label="เลือกเปรียบเทียบรถ 6">เปรียบเทียบ</label>
+                      <a href="car-detail-3.html">ดูรายละเอียด →</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <p id="noCars" class="empty-state" hidden="">ไม่พบรถตามเงื่อนไข ลองลดตัวกรองหรือค้นหาด้วยชื่ออื่น</p>
+            <p class="data-note">ข้อมูลและราคาเป็นตัวอย่างสำหรับโครงงาน กรุณาตรวจสอบกับผู้ผลิตหรือผู้จำหน่ายก่อนตัดสินใจ</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

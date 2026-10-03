@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarGuy ช่วยให้มือใหม่ค้นหาและเปรียบเทียบรถที่เหมาะกับการใช้งาน">
+    <title>หน้าแรก | CarGuy</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body data-page="1" class="home-page">
+    <a class="skip-link" href="#main">ข้ามไปเนื้อหา</a>
+    <!-- เมนูหลัก: แก้ชื่อและลิงก์ได้ตรงนี้ เมนูมือถือใช้ checkbox + CSS ไม่ต้องมี JavaScript -->
+    <header class="site-header">
+      <nav class="navbar ">
+        <div class="container">
+          <a class="navbar-brand" href="index-1.html">CarGuy</a>
+          <input class="menu-toggle-input" type="checkbox" id="menuToggle" aria-label="เปิดหรือปิดเมนูหลัก">
+          <label for="menuToggle" class="navbar-toggler"><span class="menu-open-icon" aria-hidden="true">☰</span><span class="menu-close-icon" aria-hidden="true">×</span><span class="visually-hidden">เมนูหลัก</span></label>
+          <div class="navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index-1.html">หน้าแรก</a>
+              </li>
+              <li class="nav-item dropdown">
+                <details class="nav-dropdown">
+                  <summary class="nav-link">สำรวจรถ <span aria-hidden="true">⌄</span></summary>
+                  <div class="explore-menu">
+                    <a class="dropdown-item" href="car-search-2.html">รถทั้งหมด</a>
+                    <details>
+                      <summary>แบรนด์รถ</summary>
+                      <a href="brands-4.html">Toyota</a>
+                      <a href="brands-4.html">Honda</a>
+                      <a href="brands-4.html">BYD</a>
+                    </details>
+                    <details>
+                      <summary>ประเภทรถ</summary>
+                      <a href="car-search-2.html">SUV</a>
+                      <a href="car-search-2.html">Sedan</a>
+                      <a href="car-search-2.html">รถไฟฟ้า</a>
+                    </details>
+                    <a class="dropdown-item" href="showrooms-5.html">ค้นหาโชว์รูม</a>
+                    <a class="dropdown-item" href="saved-8.html">รถที่บันทึกไว้ </a>
+                    <a class="dropdown-item" href="promotions-20.html">โปรโมชันรถยนต์</a>
+                  </div>
+                </details>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="find-car-6.html">หารถที่เหมาะกับคุณ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="compare-7.html">เปรียบเทียบ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="articles-9.html">บทความ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ev-hub-11.html">EV Hub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- TODO: เว็บชุดนี้เป็น Static HTML/CSS สำหรับ Mockup ยังไม่มีระบบค้นหา คำนวณ หรือบันทึกข้อมูล ลิงก์รายละเอียดใช้หน้าตัวอย่างเดียวกัน -->
+    <main id="main">
+      <section class="page-banner photo-banner home-hero" style="background-image: url(&quot;../img/01-home-banner.png&quot;);">
+        <div class="container">
+          <div class="banner-copy">
+            <h1>ค้นพบรถที่ใช่<br>สำหรับคุณ</h1>
+            <p>ข้อมูลครบ เปรียบเทียบง่าย ตัดสินใจได้มั่นใจกว่า<br>เพราะทุกการเดินทาง มีรถที่ใช่อยู่เสมอ</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="find-car-6.html" class="btn btn-primary">หารถที่เหมาะกับฉัน</a>
+              <a href="car-search-2.html" class="btn btn-outline-primary">สำรวจรถ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container section-space">
+        <div class="section-heading">
+          <h2>เริ่มค้นหารถในแบบของคุณ</h2>
+          <p>สำรวจจากการใช้งาน เพื่อเจอรถที่ตอบโจทย์ไลฟ์สไตล์ของคุณ</p>
+        </div>
+        <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+        <div class="row g-3">
+          <div class="col-4">
+            <a class="use-card" href="car-search-2.html"><img src="../img/12-best-ev-banner.png" alt="ขับในเมือง" class="" loading="lazy"><div class="p-3"><h3>ขับในเมือง<span aria-hidden="true">→</span></h3><p>ดูรถที่เหมาะกับการใช้ในชีวิตประจำวัน</p></div></a>
+          </div>
+          <div class="col-4">
+            <a class="use-card" href="car-search-2.html"><img src="../img/10-read-banner.png" alt="เดินทางกับครอบครัว" class="" loading="lazy"><div class="p-3"><h3>เดินทางกับครอบครัว<span aria-hidden="true">→</span></h3><p>เลือกพื้นที่นั่งและเก็บของให้เพียงพอ</p></div></a>
+          </div>
+          <div class="col-4">
+            <a class="use-card" href="car-search-2.html"><img src="../img/04-brand-banner.png" alt="เดินทางไกล" class="" loading="lazy"><div class="p-3"><h3>เดินทางไกล<span aria-hidden="true">→</span></h3><p>สำรวจรถที่เน้นความสบายตลอดเส้นทาง</p></div></a>
+          </div>
+        </div>
+        <section class="mt-3">
+          <div class="section-heading">
+            <h2>เรื่องที่มือใหม่ควรรู้</h2>
+          </div>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div class="row g-3">
+            <div class="col-6">
+              <a class="story-card story-horizontal" href="article-10.html"><img src="../img/10-read-banner.png" alt="รถคันแรก เริ่มเลือกจากชีวิตประจำวัน" class="" loading="lazy"><div class="p-3"><span class="eyebrow">มือใหม่</span><h3>รถคันแรก เริ่มเลือกจากชีวิตประจำวัน</h3><p>ก่อนดูยี่ห้อหรือรุ่น ลองเริ่มจากเส้นทางที่ใช้ จำนวนผู้โดยสาร และงบที่พร้อมจ่าย</p><span class="read-more">อ่านบทความ →</span></div></a>
+            </div>
+            <div class="col-6">
+              <a class="story-card story-horizontal" href="article-10.html"><img src="../img/11-ev-hub-banner.png" alt="ไฮบริดกับรถไฟฟ้า แบบไหนเหมาะกับเรา" class="" loading="lazy"><div class="p-3"><span class="eyebrow">EV</span><h3>ไฮบริดกับรถไฟฟ้า แบบไหนเหมาะกับเรา</h3><p>เริ่มจากความสะดวกในการชาร์จและรูปแบบการเดินทาง แทนการดูเพียงค่าใช้จ่ายด้านพลังงาน</p><span class="read-more">อ่านบทความ →</span></div></a>
+            </div>
+          </div>
+        </section>
+        <section class="mt-3">
+          <div class="d-flex justify-content-between align-items-center gap-3 mb-3">
+            <h2 class="mb-0">รถที่คุณบันทึกไว้</h2>
+            <a href="saved-8.html" class="">ดูทั้งหมด →</a>
+          </div>
+          <!-- Layout: row รวม 12 ส่วน — ดู col-... ของแต่ละกล่องเพื่อปรับความกว้าง -->
+          <div id="homeSaved" class="row g-3">
+            <!-- TODO: เปลี่ยนรายการตัวอย่างเป็นรถที่ผู้ใช้บันทึก -->
+            <div class="col-4">
+              <article class="car-card car-card-mini">
+                <a class="car-image" href="car-detail-3.html"><img src="../img/Car img/toyota-camry.png" alt="Toyota Camry" class="" loading="lazy"></a>
+                <div class="car-card-body">
+                  <a class="car-name" href="car-detail-3.html">Toyota Camry</a>
+                  <p class="small mb-2">HEV Smart · ไฮบริด</p>
+                  <strong>เริ่ม 1,475,000 บาท</strong>
+                  <div class="card-actions">
+                    <!-- TODO: เพิ่ม JavaScript สำหรับปุ่มบันทึกภายหลัง -->
+                    <button class="text-button" type="button">♡ บันทึก</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="car-card car-card-mini">
+                <a class="car-image" href="car-detail-3.html"><img src="../img/Car img/honda-civic.png" alt="Honda Civic" class="" loading="lazy"></a>
+                <div class="car-card-body">
+                  <a class="car-name" href="car-detail-3.html">Honda Civic</a>
+                  <p class="small mb-2">e:HEV EL+ · ไฮบริด</p>
+                  <strong>เริ่ม 1,099,000 บาท</strong>
+                  <div class="card-actions">
+                    <!-- TODO: เพิ่ม JavaScript สำหรับปุ่มบันทึกภายหลัง -->
+                    <button class="text-button" type="button">♡ บันทึก</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="car-card car-card-mini">
+                <a class="car-image" href="car-detail-3.html"><img src="../img/Car img/byd-atto-3.png" alt="BYD ATTO 3" class="" loading="lazy"></a>
+                <div class="car-card-body">
+                  <a class="car-name" href="car-detail-3.html">BYD ATTO 3</a>
+                  <p class="small mb-2">Premium · ไฟฟ้า</p>
+                  <strong>เริ่ม 899,900 บาท</strong>
+                  <div class="card-actions">
+                    <!-- TODO: เพิ่ม JavaScript สำหรับปุ่มบันทึกภายหลัง -->
+                    <button class="text-button" type="button">♡ บันทึก</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- ส่วนท้ายเว็บ ใช้ลิงก์ไปหน้าหรือหัวข้อที่มีอยู่จริง -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-4">
+            <a class="brand" href="index-1.html">CarGuy</a>
+            <span class="small ms-3">เรื่องรถให้เราช่วยคุณ</span>
+          </div>
+          <div class="col-5">
+            <div class="footer-links">
+              <a href="about-16.html" class="">เกี่ยวกับเรา</a>
+              <a href="about-16.html#contact" class="">ติดต่อเรา</a>
+              <a href="about-16.html#privacy" class="">นโยบายความเป็นส่วนตัว</a>
+              <a href="about-16.html#terms" class="">ข้อกำหนดการใช้งาน</a>
+            </div>
+          </div>
+          <div class="col-3 small text-end">
+            ©2026 CarGuy. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
