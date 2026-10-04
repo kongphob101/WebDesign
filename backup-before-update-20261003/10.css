@@ -1,0 +1,260 @@
+.article-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+}
+
+.breadcrumb-nav {
+    font-size: 0.85rem;
+    color: #8A9BAA;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb-nav a {
+    color: #8A9BAA;
+    text-decoration: none;
+}
+
+.breadcrumb-nav a:hover {
+    color: #297DF9;
+}
+
+.breadcrumb-nav span {
+    color: #5A6E85;
+}
+
+.article-category {
+    color: #297DF9;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.article-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0E1F43;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+}
+
+.article-lead {
+    color: #5A6E85;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.author-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-meta p {
+    margin: 0;
+    font-size: 0.88rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: #0E1F43;
+}
+
+.author-date {
+    color: #8A9BAA;
+    font-size: 0.82rem;
+}
+
+.article-hero-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.article-text {
+    color: #5A6E85;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+}
+
+.pros-cons-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.pros-box, 
+.cons-box {
+    flex: 1;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.pros-box {
+    background-color: #EBF3FA;
+}
+
+.cons-box {
+    background-color: #FDF0ED;
+}
+
+.box-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.pros-box .box-title {
+    color: #0E1F43;
+}
+
+.cons-box .box-title {
+    color: #0E1F43;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: #5A6E85;
+    line-height: 1.4;
+}
+
+.badge-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.badge-check {
+    background-color: #297DF9;
+}
+
+.badge-warning {
+    background-color: #FF6B4A;
+}
+
+.related-car-card {
+    background-color: #EBF3FA;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.related-label {
+    font-weight: 700;
+    color: #0E1F43;
+    font-size: 1.05rem;
+    min-width: 140px;
+}
+
+.car-details h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0E1F43;
+    margin-bottom: 0.2rem;
+}
+
+.car-details .car-sub {
+    font-size: 0.82rem;
+    color: #5A6E85;
+    margin-bottom: 0.3rem;
+}
+
+.car-details .car-desc {
+    font-size: 0.82rem;
+    color: #8A9BAA;
+    margin-bottom: 0.5rem;
+}
+
+.car-details .car-price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0E1F43;
+}
+
+.btn-detail {
+    background-color: #0E1F43;
+    color: white;
+    padding: 0.65rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-detail:hover {
+    color: white;
+    background-color: #172E5C;
+}
+.imgrelated {
+    max-width: 30%;
+    width: 250px;
+    height: 100px;
+}
+
+@media screen and (max-width: 425px) {
+    .article-heading {
+        font-size: 1.7rem;
+    }
+
+    .article-hero-img {
+        height: 240px;
+    }
+
+    .pros-cons-wrapper {
+        flex-direction: column;
+    }
+
+    .related-car-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.2rem;
+    }
+
+    .related-label {
+        min-width: auto;
+    }
+
+    .btn-detail {
+        width: 100%;
+        justify-content: center;
+    }
+}

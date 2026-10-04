@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ปฏิทินงานรถยนต์ - CarGuy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="14.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container-fluid px-0">
+        <nav>
+            <h1>CarGuy</h1>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><img height="24" width="24" src="../icon/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">สำรวจรถ</a></li>
+                <li><a href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a href="#">เปรียบเทียบ</a></li>
+                <li><a href="#">บทความ</a></li>
+                <li><a href="#">Ev Hub</a></li>
+            </ul>
+
+            <ul>
+                <li><a class="a-hide" href="#">หน้าแรก</a></li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">สำรวจรถ ▾</a>
+                    <ul class="submenu">
+                        <li><a class="a-hide" href="">รถยนต์ทั้งหมด</a></li>
+                        <li class="dropdown">
+                            <a href="">เลือกตามแบรนด์ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Toyota</a>
+                                <a href="">Honda</a>
+                                <a href="">Byd</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="a-hide" href="">เลือกตามประเภทรถ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Sedan</a>
+                                <a href="">SUV</a>
+                                <a href="">Hatchback</a>
+                                <a href="">Pickup</a>
+                            </ul>
+                        </li>
+                        <li><a href="">ค้นหาโชว์รูม</a></li>
+                        <li><a href="">คำณวนเงินดาวน์-ค่างวด</a></li>
+                        <li><a href="">รวมโปรโมชันรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li><a class="a-hide" href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a class="a-hide" href="#">เปรียบเทียบ</a></li>
+                <li class="dropdown">
+                    <a class="a-hide active" href="#">บทความ ▾</a>
+                    <ul class="submenu">
+                        <li><a href="">บทความทั้งหมด</a></li>
+                        <li><a href="">คู่มือเช็กรถก่อนรับรถ</a></li>
+                        <li><a href="">รีวิวจากเจ้าของรถ</a></li>
+                        <li><a href="">ปฏิทินงานรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">Ev Hub ▾</a>
+                    <ul class="submenu-left">
+                        <li><a href="">หน้าหลัก Ev Hub</a></li>
+                        <li><a href="">Best EV</a></li>
+                        <li><a href="">ค้นหาจุดชาร์จ</a></li>
+                    </ul>
+                </li>
+                <li onclick="showSidebar()"><a href="#"><img height="24" width="24" src="../icon/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="calendar-hero">
+        <div class="calendar-container">
+            <h1 class="hero-title">ปฏิทินงานรถยนต์</h1>
+            <p class="hero-desc">อัปเดตงานแสดงรถ เปิดตัวรุ่นใหม่ และกิจกรรมรถยนต์ทั่วประเทศ ไม่พลาดทุกความเคลื่อนไหว</p>
+
+            <div class="calendar-layout">
+
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <button class="cal-nav">&lt;</button>
+                        <h2>เมษายน 2026</h2>
+                        <button class="cal-nav">&gt;</button>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <div class="day-name">อา</div>
+                        <div class="day-name">จ</div>
+                        <div class="day-name">อ</div>
+                        <div class="day-name">พ</div>
+                        <div class="day-name">พฤ</div>
+                        <div class="day-name">ศ</div>
+                        <div class="day-name">ส</div>
+
+                        <div class="day-cell other-month">31</div>
+                        <div class="day-cell active-event">
+                            <span class="day-number">1</span>
+                            <span class="event-tag">Motor Show 2026</span>
+                        </div>
+                        <div class="day-cell">2</div>
+                        <div class="day-cell">3</div>
+                        <div class="day-cell">4</div>
+                        <div class="day-cell">5</div>
+                        <div class="day-cell">6</div>
+
+                        <div class="day-cell">7</div>
+                        <div class="day-cell">8</div>
+                        <div class="day-cell">9</div>
+                        <div class="day-cell">10</div>
+                        <div class="day-cell">11</div>
+                        <div class="day-cell">12</div>
+                        <div class="day-cell">13</div>
+
+                        <div class="day-cell">14</div>
+                        <div class="day-cell">15</div>
+                        <div class="day-cell">16</div>
+                        <div class="day-cell">17</div>
+                        <div class="day-cell">18</div>
+                        <div class="day-cell">19</div>
+                        <div class="day-cell">20</div>
+
+                        <div class="day-cell">21</div>
+                        <div class="day-cell">22</div>
+                        <div class="day-cell">24</div>
+                        <div class="day-cell">25</div>
+                        <div class="day-cell">26</div>
+                        <div class="day-cell">27</div>
+                        <div class="day-cell">28</div>
+
+                        <div class="day-cell">29</div>
+                        <div class="day-cell">30</div>
+                        <div class="day-cell">31</div>
+                        <div class="day-cell other-month">1</div>
+                        <div class="day-cell other-month">2</div>
+                        <div class="day-cell other-month">3</div>
+                        <div class="day-cell other-month">4</div>
+                    </div>
+                </div>
+
+                <div class="upcoming-section">
+                    <div class="section-title-row">
+                        <h3>งานที่กำลังจะมาถึง</h3>
+                        <a href="#" class="btn-see-all">ทั้งหมด &rarr;</a>
+                    </div>
+
+                    <div class="upcoming-list">
+                        <div class="upcoming-card">
+                            <div class="upcoming-img">
+                                <img src="../img/01-home-banner.png" alt="Bangkok International Motor Show 2026">
+                            </div>
+                            <div class="upcoming-info">
+                                <h4>Bangkok International Motor Show 2026</h4>
+                                <p class="loc-text">อิมแพ็ค เมืองทองธานี นนทบุรี</p>
+                                <p class="date-text">2-7 ม.ค. 2026</p>
+                                <a href="#" class="link-more">อ่านเพิ่มเติม &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="upcoming-card">
+                            <div class="upcoming-img">
+                                <img src="../img/01-home-banner.png" alt="EV Expo Thailand 2026">
+                            </div>
+                            <div class="upcoming-info">
+                                <h4>EV Expo Thailand 2026</h4>
+                                <p class="loc-text">ศูนย์การประชุมแห่งชาติสิริกิติ์ กรุงเทพ</p>
+                                <p class="date-text">9-12 เม.ย. 2026</p>
+                                <a href="#" class="link-more">อ่านเพิ่มเติม &rarr;</a>
+                            </div>
+                        </div>
+
+                        <div class="upcoming-card">
+                            <div class="upcoming-img">
+                                <img src="../img/01-home-banner.png" alt="BMW Joy Drive">
+                            </div>
+                            <div class="upcoming-info">
+                                <h4>BMW Joy Drive</h4>
+                                <p class="loc-text">BMW Driving Experience Center</p>
+                                <p class="date-text">17 เม.ย. 2026</p>
+                                <a href="#" class="link-more">อ่านเพิ่มเติม &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="calendar-container main-content">
+        <h2 class="recommended-title">งานที่แนะนำสำหรับคุณ</h2>
+
+        <div class="recommended-grid">
+            <div class="rec-card">
+                <div class="rec-img">
+                    <img src="../img/01-home-banner.png" alt="BYD Tech Showcase">
+                </div>
+                <div class="rec-info">
+                    <h3>BYD Tech Showcase</h3>
+                    <p class="loc-text">ไบเทค บางนา กรุงเทพ</p>
+                    <p class="date-text">6 - 9 พ.ค. 2026</p>
+                    <p class="desc-text">พบนวัตกรรมยานยนต์ไฟฟ้า จาก BYD</p>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-img">
+                    <img src="../img/01-home-banner.png" alt="Isuzu Test Drive Festival">
+                </div>
+                <div class="rec-info">
+                    <h3>Isuzu Test Drive Festival</h3>
+                    <p class="loc-text">เซ็นทรัล ขอนแก่น</p>
+                    <p class="date-text">22 - 26 พ.ค. 2026</p>
+                    <p class="desc-text">ทดลองขับกระบะและ SUV รุ่นล่าสุดพร้อมกิจกรรมครอบครัว</p>
+                </div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-img">
+                    <img src="../img/01-home-banner.png" alt="GMW Driving Future">
+                </div>
+                <div class="rec-info">
+                    <h3>GMW Driving Future</h3>
+                    <p class="loc-text">เซ็นทรัล เวสต์เกต นนทบุรี</p>
+                    <p class="date-text">30 พ.ค. - 2 มิ.ย. 2026</p>
+                    <p class="desc-text">สัมผัสอนาคตของการขับขี่กับ GWM รถยนต์ไฟฟ้าและไฮบริด</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <h1>CarGuy</h1>
+            <p class="px-3 m-0">เรื่องรถให้เราช่วยคุณ</p>
+        </div>
+        <div>
+            <ul class="d-flex align-items-center m-0">
+                <li><a href="">เกี่ยวกับเรา</a></li>
+                <li><a href="">ติดต่อเรา</a></li>
+                <li><a href="">นโยบายความเป็นส่วนตัว</a></li>
+                <li><a href="">ข้อกำหนดการใช้งาน</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="text">&copy;2026 CarGuy. All right reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

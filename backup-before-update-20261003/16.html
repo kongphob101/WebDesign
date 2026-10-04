@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - CarGuy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="16.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container-fluid px-0">
+        <nav>
+            <h1>CarGuy</h1>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><img height="24" width="24" src="../icon/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">สำรวจรถ</a></li>
+                <li><a href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a href="#">เปรียบเทียบ</a></li>
+                <li><a href="#">บทความ</a></li>
+                <li><a href="#">Ev Hub</a></li>
+            </ul>
+
+            <ul>
+                <li><a class="a-hide" href="#">หน้าแรก</a></li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">สำรวจรถ ▾</a>
+                    <ul class="submenu">
+                        <li><a class="a-hide" href="">รถยนต์ทั้งหมด</a></li>
+                        <li class="dropdown">
+                            <a href="">เลือกตามแบรนด์ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Toyota</a>
+                                <a href="">Honda</a>
+                                <a href="">Byd</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="a-hide" href="">เลือกตามประเภทรถ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Sedan</a>
+                                <a href="">SUV</a>
+                                <a href="">Hatchback</a>
+                                <a href="">Pickup</a>
+                            </ul>
+                        </li>
+                        <li><a href="">ค้นหาโชว์รูม</a></li>
+                        <li><a href="">คำณวนเงินดาวน์-ค่างวด</a></li>
+                        <li><a href="">รวมโปรโมชันรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li><a class="a-hide" href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a class="a-hide" href="#">เปรียบเทียบ</a></li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">บทความ ▾</a>
+                    <ul class="submenu">
+                        <li><a href="">บทความทั้งหมด</a></li>
+                        <li><a href="">คู่มือเช็กรถก่อนรับรถ</a></li>
+                        <li><a href="">รีวิวจากเจ้าของรถ</a></li>
+                        <li><a href="">ปฏิทินงานรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">Ev Hub ▾</a>
+                    <ul class="submenu-left">
+                        <li><a href="">หน้าหลัก Ev Hub</a></li>
+                        <li><a href="">Best EV</a></li>
+                        <li><a href="">ค้นหาจุดชาร์จ</a></li>
+                    </ul>
+                </li>
+                <li onclick="showSidebar()"><a href="#"><img height="24" width="24" src="../icon/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="about-hero">
+        <div class="about-container">
+            <h1 class="hero-title">ช่วยให้เรื่องเลือกรถ เป็นเรื่องง่าย</h1>
+            <p class="hero-desc">CarGuy คือพื้นที่ที่รวบรวมข้อมูลรถยนต์ครบถ้วน โปร่งใส<br class="desktop-only-br"> และเข้าใจง่าย เพื่อให้ทุกคนเลือกรถที่ใช่ สำหรับชีวิตจริง</p>
+        </div>
+    </header>
+
+    <main class="about-container main-content">
+        <section class="how-section">
+            <div class="section-title-wrap">
+                <h2 class="section-title">วิธีที่เราช่วยให้คุณเลือกรถได้ดีขึ้น</h2>
+                <p class="section-subtitle">จากข้อมูล สู่การตัดสินใจ อย่างมั่นใจ</p>
+            </div>
+
+            <div class="steps-wrapper">
+                <div class="step-card">
+                    <div class="step-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#297DF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3>1. รวบรวมข้อมูล</h3>
+                        <p>สเปก ราคา รีวิว และข่าวสาร<br>จากแหล่งที่เชื่อถือได้</p>
+                    </div>
+                </div>
+
+                <div class="step-arrow">
+                    <span class="arrow-desktop">&rarr;</span>
+                    <span class="arrow-mobile">&darr;</span>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#297DF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3>2. เปรียบเทียบได้ง่าย</h3>
+                        <p>ดูความแตกต่างของรุ่นต่างๆ<br>ในรูปแบบที่เข้าใจได้ทันที</p>
+                    </div>
+                </div>
+
+                <div class="step-arrow">
+                    <span class="arrow-desktop">&rarr;</span>
+                    <span class="arrow-mobile">&darr;</span>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#297DF9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <h3>3. ตัดสินใจอย่างมั่นใจ</h3>
+                        <p>มีข้อมูลครบถ้วน เพื่อคุณ เลือกรถ<br>ที่เหมาะกับไลฟ์สไตล์ของคุณ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-text-section">
+            <h2>ข้อมูลเชื่อถือได้ โปร่งใส และเป็นกลาง</h2>
+            <p>เรารวบรวมข้อมูลจากผู้ผลิตรถยนต์อย่างเป็นทางการ สื่อยานยนต์ชั้นนำ และแหล่งข้อมูลที่เชื่อถือได้ พร้อมตรวจสอบและเรียบเรียงให้เข้าใจง่าย เพื่อให้คุณเข้าถึงข้อมูลที่ถูกต้อง ครบถ้วนและเป็นกลาง</p>
+        </section>
+
+        <section class="info-text-section">
+            <h2>รู้จัก CarGuy</h2>
+            <p class="intro-bold">เรื่องรถเข้าใจง่าย เริ่มจากสิ่งที่เหมาะกับคุณ</p>
+            <p>CarGuy ช่วยคนที่กำลังมองหารถแต่ยังไม่รู้ว่าจะเลือกรุ่นไหน ให้ค้นพบตัวเลือกที่เหมาะกับการใช้งาน ผ่านคำถามช่วยเลือกรถ ข้อมูลรุ่นย่อย ตารางเปรียบเทียบ และบทความเรื่องรถรวมถึง EV เราอยากให้ทุกคนเข้าใจความแตกต่างและตัดสินใจได้มั่นใจขึ้น แม้ไม่มีพื้นฐานเรื่องรถ เพราะรถที่เหมาะกับคุณ ไม่จำเป็นต้องเหมือนใคร</p>
+        </section>
+    </main>
+
+    <footer class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <h1>CarGuy</h1>
+            <p class="px-3 m-0">เรื่องรถให้เราช่วยคุณ</p>
+        </div>
+        <div>
+            <ul class="d-flex align-items-center m-0">
+                <li><a href="">เกี่ยวกับเรา</a></li>
+                <li><a href="">ติดต่อเรา</a></li>
+                <li><a href="">นโยบายความเป็นส่วนตัว</a></li>
+                <li><a href="">ข้อกำหนดการใช้งาน</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="text">&copy;2026 CarGuy. All right reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

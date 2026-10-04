@@ -1,0 +1,230 @@
+.promo-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.promo-hero {
+    background-color: #EBF1FA;
+    padding: 2.5rem 0 2rem 0;
+}
+
+.hero-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #0F1E42;
+    margin-bottom: 0.6rem;
+}
+
+.hero-desc {
+    font-size: 0.95rem;
+    color: #5A6E85;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.mobile-only-br {
+    display: none;
+}
+
+.main-content {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+}
+
+.section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin-bottom: 1.2rem;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.promo-card {
+    background-color: #ffffff;
+    border: 1px solid #D0DFEE;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.promo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-body {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.car-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin-bottom: 0.5rem;
+}
+
+.promo-detail {
+    font-size: 0.85rem;
+    color: #5A6E85;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.promo-period {
+    font-size: 0.8rem;
+    color: #8A9BAA;
+    margin-bottom: 1.2rem;
+}
+
+.promo-action {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-detail {
+    display: inline-block;
+    border: 1px solid #297DF9;
+    color: #297DF9;
+    border-radius: 6px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-detail:hover {
+    background-color: #297DF9;
+    color: #ffffff;
+}
+
+.terms-card {
+    background-color: #ffffff;
+    border: 1px solid #D0DFEE;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-top: 2.5rem;
+}
+
+.terms-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin-bottom: 1.2rem;
+}
+
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem 1.8rem;
+}
+
+.terms-item {
+    font-size: 0.82rem;
+    color: #5A6E85;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .promo-container {
+        padding: 0 1rem;
+    }
+
+    .promo-hero {
+        padding: 1.5rem 0 1.2rem 0;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .hero-desc {
+        font-size: 0.8rem;
+    }
+
+    .mobile-only-br {
+        display: inline;
+    }
+
+    .main-content {
+        padding-top: 1.2rem;
+        padding-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .promo-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .promo-img {
+        height: 160px;
+    }
+
+    .promo-body {
+        padding: 1rem;
+    }
+
+    .car-title {
+        font-size: 1rem;
+    }
+
+    .promo-detail {
+        font-size: 0.8rem;
+    }
+
+    .promo-period {
+        font-size: 0.75rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .btn-detail {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .terms-card {
+        padding: 1.2rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+    }
+
+    .terms-title {
+        font-size: 1.05rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .terms-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
+
+    .terms-item {
+        font-size: 0.76rem;
+        line-height: 1.45;
+    }
+}

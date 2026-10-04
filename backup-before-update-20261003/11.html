@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Hub - CarGuy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="11.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="container-fluid px-0">
+        <nav>
+            <h1>CarGuy</h1>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><img height="24" width="24" src="../icon/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">สำรวจรถ</a></li>
+                <li><a href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a href="#">เปรียบเทียบ</a></li>
+                <li><a href="#">บทความ</a></li>
+                <li><a href="#">Ev Hub</a></li>
+            </ul>
+
+            <ul>
+                <li><a class="a-hide" href="#">หน้าแรก</a></li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">สำรวจรถ ▾</a>
+                    <ul class="submenu">
+                        <li><a class="a-hide" href="">รถยนต์ทั้งหมด</a></li>
+                        <li class="dropdown">
+                            <a href="">เลือกตามแบรนด์ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Toyota</a>
+                                <a href="">Honda</a>
+                                <a href="">Byd</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="a-hide" href="">เลือกตามประเภทรถ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Sedan</a>
+                                <a href="">SUV</a>
+                                <a href="">Hatchback</a>
+                                <a href="">Pickup</a>
+                            </ul>
+                        </li>
+                        <li><a href="">ค้นหาโชว์รูม</a></li>
+                        <li><a href="">คำณวนเงินดาวน์-ค่างวด</a></li>
+                        <li><a href="">รวมโปรโมชันรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li><a class="a-hide" href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a class="a-hide" href="#">เปรียบเทียบ</a></li>
+                <li class="dropdown">
+                    <a class="a-hide active" href="#">บทความ ▾</a>
+                    <ul class="submenu">
+                        <li><a href="">บทความทั้งหมด</a></li>
+                        <li><a href="">คู่มือเช็กรถก่อนรับรถ</a></li>
+                        <li><a href="">รีวิวจากเจ้าของรถ</a></li>
+                        <li><a href="">ปฏิทินงานรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">Ev Hub ▾</a>
+                    <ul class="submenu-left">
+                        <li><a href="">หน้าหลัก Ev Hub</a></li>
+                        <li><a href="">Best EV</a></li>
+                        <li><a href="">ค้นหาจุดชาร์จ</a></li>
+                    </ul>
+                </li>
+                <li onclick="showSidebar()"><a href="#"><img height="24" width="24" src="../icon/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="ev-main-container">
+
+        <section class="ev-hero-banner">
+            <div class="ev-breadcrumb">
+                <a href="#">Home</a> / <span>Ev Hub</span>
+            </div>
+            <h1 class="ev-hero-title">เข้าใจ EV ก่อนเลือกคันที่ใช่</h1>
+            <p class="ev-hero-desc">
+                ครบทุกเรื่องที่คุณควรรู้ ทั้งเทคโนโลยี การใช้งาน การชาร์จ และเทรนด์อนาคต เพื่อให้การเลือก EV เป็นเรื่องที่ง่ายขึ้น
+            </p>
+        </section>
+
+        <div class="ev-content-grid">
+
+            <div class="ev-left-col">
+                <div class="section-header-flex">
+                    <h2 class="section-title mb-0">บทความล่าสุด</h2>
+                    <a href="#" class="btn-view-all-desktop">ดูบทความทั้งหมด &rarr;</a>
+                </div>
+
+                <div class="articles-list">
+
+                    <a href="#" class="article-card">
+                        <img src="../img/01-home-banner.png" alt="วิธีชาร์จรถยนต์ไฟฟ้า" class="article-card-img" onerror="this.src='https://placehold.co/400x250/E2E8F0/1E293B?text=EV+Charging'">
+                        <div class="article-card-body">
+                            <div class="article-category-tag">ความรู้ EV</div>
+                            <div class="article-card-title">วิธีชาร์จรถยนต์ไฟฟ้าอย่างถูกต้องและปลอดภัย</div>
+                            <p class="article-card-excerpt">รวมขั้นตอนการชาร์จ ประเภทหัวชาร์จ และข้อควรระวังที่ผู้ใช้ EV ทุกคนควรรู้</p>
+                            <div class="article-card-date">12 พ.ย. 2024</div>
+                        </div>
+                    </a>
+
+
+                    <a href="#" class="article-card">
+                        <img src="../img/01-home-banner.png" alt="รีวิว 5 SUV ไฟฟ้า" class="article-card-img" onerror="this.src='https://placehold.co/400x250/E2E8F0/1E293B?text=EV+SUV'">
+                        <div class="article-card-body">
+                            <div class="article-category-tag">รีวิวและทดสอบขับ</div>
+                            <div class="article-card-title">รีวิว 5 SUV ไฟฟ้ายอดนิยม ปี 2024</div>
+                            <p class="article-card-excerpt">เปรียบเทียบสเปก ระยะทาง ราคา และฟีเจอร์เด่น รุ่นไหนเหมาะกับคุณ</p>
+                            <div class="article-card-date">8 พ.ย. 2024</div>
+                        </div>
+                    </a>
+
+
+                    <a href="#" class="article-card">
+                        <img src="../img/01-home-banner.png" alt="แบตเตอรี่รถยนต์ไฟฟ้า" class="article-card-img" onerror="this.src='https://placehold.co/400x250/E2E8F0/1E293B?text=EV+Battery'">
+                        <div class="article-card-body">
+                            <div class="article-category-tag">เทคโนโลยี EV</div>
+                            <div class="article-card-title">แบตเตอรี่รถยนต์ไฟฟ้า ทำงานอย่างไร</div>
+                            <p class="article-card-excerpt">ทำความเข้าใจเทคโนโลยีแบตเตอรี่ ประเภทของแบตฯ และอายุการใช้งาน</p>
+                            <div class="article-card-date">5 พ.ย. 2024</div>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="#" class="btn-view-all-mobile">ดูบทความทั้งหมด &rarr;</a>
+            </div>
+
+
+            <div class="ev-divider"></div>
+
+
+            <div class="ev-right-col">
+                <h2 class="section-title">เรียนรู้เรื่อง EV</h2>
+
+                <div class="learn-list">
+
+                    <a href="#" class="learn-card">
+                        <img src="../img/01-home-banner.png" alt="การชาร์จ" class="learn-card-img" onerror="this.src='https://placehold.co/200x150/E2E8F0/1E293B?text=Charging'">
+                        <div class="learn-card-content">
+                            <div class="learn-card-title">การชาร์จ</div>
+                            <p class="learn-card-desc">ประเภทหัวชาร์จ วิธีชาร์จ และระยะเวลาในการชาร์จ</p>
+                        </div>
+                        <span class="chevron-icon">&rsaquo;</span>
+                    </a>
+
+
+                    <a href="#" class="learn-card">
+                        <img src="../img/01-home-banner.png" alt="แบตเตอรี่" class="learn-card-img" onerror="this.src='https://placehold.co/200x150/E2E8F0/1E293B?text=Battery'">
+                        <div class="learn-card-content">
+                            <div class="learn-card-title">แบตเตอรี่</div>
+                            <p class="learn-card-desc">ประเภทของแบตเตอรี่ อายุการใช้งาน และการดูแลรักษา</p>
+                        </div>
+                        <span class="chevron-icon">&rsaquo;</span>
+                    </a>
+
+
+                    <a href="#" class="learn-card">
+                        <img src="../img/01-home-banner.png" alt="เทคโนโลยีและสมรรถนะ" class="learn-card-img" onerror="this.src='https://placehold.co/200x150/E2E8F0/1E293B?text=Tech'">
+                        <div class="learn-card-content">
+                            <div class="learn-card-title">เทคโนโลยีและสมรรถนะ</div>
+                            <p class="learn-card-desc">มอเตอร์ไฟฟ้า การขับขี่ และความแตกต่างจากรถน้ำมัน</p>
+                        </div>
+                        <span class="chevron-icon">&rsaquo;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="explore-section">
+            <h2 class="section-title">สำรวจเพิ่มเติม</h2>
+            <div class="explore-grid">
+
+                <a href="#" class="explore-card">
+                    <img src="../img/01-home-banner.png" alt="รถยนต์ไฟฟ้ายอดนิยม" class="explore-card-img" onerror="this.src='https://placehold.co/200x150/E2E8F0/1E293B?text=Popular+EV'">
+                    <div class="explore-card-info">
+                        <div class="explore-card-title">รถยนต์ไฟฟ้ายอดนิยม</div>
+                        <p class="explore-card-desc">ดูรุ่นที่ยอดนิยมและเปรียบเทียบสเปก</p>
+                    </div>
+                    <span class="chevron-icon">&rsaquo;</span>
+                </a>
+
+
+                <a href="#" class="explore-card">
+                    <img src="../img/01-home-banner.png" alt="แผนที่จุดชาร์จ EV" class="explore-card-img" onerror="this.src='https://placehold.co/200x150/E2E8F0/1E293B?text=EV+Stations'">
+                    <div class="explore-card-info">
+                        <div class="explore-card-title">แผนที่จุดชาร์จ EV</div>
+                        <p class="explore-card-desc">ค้นหาสถานีชาร์จใกล้คุณ</p>
+                    </div>
+                    <span class="chevron-icon">&rsaquo;</span>
+                </a>
+
+
+                <a href="#" class="explore-card">
+                    <img src="../img/01-home-banner.png" alt="สำรวจรถ EV ทั้งหมด" class="explore-card-img" onerror="this.src='https://placehold.co/200x150/E2E8F0/1E293B?text=All+EVs'">
+                    <div class="explore-card-info">
+                        <div class="explore-card-title">สำรวจรถ EV ทั้งหมด</div>
+                        <p class="explore-card-desc">ดูรถ EV ทุกรุ่น ทุกแบรนด์</p>
+                    </div>
+                    <span class="chevron-icon">&rsaquo;</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <h1>CarGuy</h1>
+            <p class="px-3 m-0">เรื่องรถให้เราช่วยคุณ</p>
+        </div>
+        <div>
+            <ul class="d-flex align-items-center m-0">
+                <li><a href="">เกี่ยวกับเรา</a></li>
+                <li><a href="">ติดต่อเรา</a></li>
+                <li><a href="">นโยบายความเป็นส่วนตัว</a></li>
+                <li><a href="">ข้อกำหนดการใช้งาน</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="text">&copy;2026 CarGuy. All right reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

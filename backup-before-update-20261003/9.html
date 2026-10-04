@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarGuy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="9.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <div class="container-fluid px-0">
+        <nav>
+            <h1>CarGuy</h1>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><img height="24" width="24" src="../icon/close_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#">สำรวจรถ</a></li>
+                <li><a href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a href="#">เปรียบเทียบ</a></li>
+                <li><a href="#">บทความ</a></li>
+                <li><a href="#">Ev Hub</a></li>
+            </ul>
+
+            <ul>
+                <li><a class="a-hide" href="#">หน้าแรก</a></li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">สำรวจรถ ▾</a>
+                    <ul class="submenu">
+                        <li><a class="a-hide" href="">รถยนต์ทั้งหมด</a></li>
+                        <li class="dropdown">
+                            <a href="">เลือกตามแบรนด์ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Toyota</a>
+                                <a href="">Honda</a>
+                                <a href="">Byd</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="a-hide" href="">เลือกตามประเภทรถ ▾</a>
+                            <ul class="submenu">
+                                <a href="">Sedan</a>
+                                <a href="">SUV</a>
+                                <a href="">Hatchback</a>
+                                <a href="">Pickup</a>
+                            </ul>
+                        </li>
+                        <li><a href="">ค้นหาโชว์รูม</a></li>
+                        <li><a href="">คำณวนเงินดาวน์-ค่างวด</a></li>
+                        <li><a href="">รวมโปรโมชันรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li><a class="a-hide" href="#">หารถที่เหมาะกับคุณ</a></li>
+                <li><a class="a-hide" href="#">เปรียบเทียบ</a></li>
+                <li class="dropdown">
+                    <a class="a-hide active" href="#">บทความ ▾</a>
+                    <ul class="submenu">
+                        <li><a href="">บทความทั้งหมด</a></li>
+                        <li><a href="">คู่มือเช็กรถก่อนรับรถ</a></li>
+                        <li><a href="">รีวิวจากเจ้าของรถ</a></li>
+                        <li><a href="">ปฏิทินงานรถยนต์</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="a-hide" href="#">Ev Hub ▾</a>
+                    <ul class="submenu-left">
+                        <li><a href="">หน้าหลัก Ev Hub</a></li>
+                        <li><a href="">Best EV</a></li>
+                        <li><a href="">ค้นหาจุดชาร์จ</a></li>
+                    </ul>
+                </li>
+                <li onclick="showSidebar()"><a href="#"><img height="24" width="24" src="../icon/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="nav-icon"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <div class="top-header">
+            <div>
+                <h1 class="heading-title">เรื่องรถ เข้าใจง่าย</h1>
+                <p class="heading-sub">อัปเดตความรู้ และเทคนิคการใช้รถ จากทีมงาน CarGuy</p>
+            </div>
+            <div class="search-wrap">
+                <input type="text" placeholder="ค้นหาบทความ เช่น รถไฟฟ้า, ดูแลรถ, SUV">
+            </div>
+        </div>
+
+        <div class="filter-group">
+            <button class="filter-btn active">ทั้งหมด</button>
+            <button class="filter-btn">คู่มือ</button>
+            <button class="filter-btn">รีวิว</button>
+            <button class="filter-btn">ความรู้</button>
+        </div>
+
+        <div class="featured-section">
+            <div class="big-card">
+                <img src="../img/01-home-banner.png" alt="Toyota RAV4">
+                <div class="big-card-body">
+                    <div>
+                        <span class="category-tag">รีวิว</span>
+                        <h2 class="card-title-lg">Toyota RAV4 Hybrid 2024: SUV ที่ลงตัวในทุกเส้นทาง</h2>
+                        <p class="card-desc">รีวิวแบบเจาะลึก ทั้งสมรรถนะ การใช้งานจริง อัตราสิ้นเปลือง และสิ่งที่น่าสนใจสำหรับคนที่กำลังมองหา SUV สายครอบครัว</p>
+                    </div>
+                    <div class="card-author">โดย ทีมงาน CarGuy | 12 มี.ค. 2024</div>
+                </div>
+            </div>
+
+            <div class="side-cards">
+                <div class="small-card">
+                    <img src="../img/03-car-detail-banner.png" alt="EV Charging">
+                    <div class="small-card-body">
+                        <div>
+                            <span class="category-tag">ความรู้</span>
+                            <h3 class="card-title-sm">รถไฟฟ้า (EV) ชาร์จยังไงให้คุ้ม</h3>
+                            <p class="card-desc-sm">รวมเรื่องต้องรู้ก่อนใช้รถไฟฟ้า ตั้งแต่ประเภทหัวชาร์จ วิธีชาร์จและเคล็ดลับการใช้งานจริง</p>
+                        </div>
+                        <div class="card-author">โดย ทีมงาน CarGuy | 8 มี.ค. 2024</div>
+                    </div>
+                </div>
+
+                <div class="small-card">
+                    <img src="../img/Car img/car-paint-inspection.png" alt="Car Key">
+                    <div class="small-card-body">
+                        <div>
+                            <span class="category-tag">คู่มือ</span>
+                            <h3 class="card-title-sm">5 เทคนิคดูแลรถช่วงหน้าร้อน</h3>
+                            <p class="card-desc-sm">วิธีดูแลรถให้พร้อมลุยทุกฤดูร้อน ลดความเสี่ยงปัญหาระบบความร้อน และยืดอายุการใช้งาน</p>
+                        </div>
+                        <div class="card-author">โดย ทีมงาน CarGuy | 5 มี.ค. 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title-wrap">
+            <h2 class="section-title">บทความล่าสุด</h2>
+            <a href="#" class="view-all-link">ดูบทความทั้งหมด &rarr;</a>
+        </div>
+
+        <div class="latest-grid">
+            <div class="grid-card">
+                <img src="../img/03-car-detail-banner.png" alt="Honda CR-V">
+                <div class="grid-card-body">
+                    <div>
+                        <span class="category-tag">รีวิว</span>
+                        <h3 class="grid-card-title">Honda RA-V e:HEV 2024 ครอบครัวก็ไปได้ไกลกว่า</h3>
+                    </div>
+                    <div class="card-author">12 มี.ค. 2024</div>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <img src="../img/04-brand-banner.png" alt="Safety Tech">
+                <div class="grid-card-body">
+                    <div>
+                        <span class="category-tag">ความรู้</span>
+                        <h3 class="grid-card-title">เทคโนโลยีความปลอดภัยในรถยุคใหม่ ที่ควรรู้</h3>
+                    </div>
+                    <div class="card-author">27 ก.พ. 2024</div>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <img src="../img/05-showrooms-banner.png" alt="BYD Atto 3">
+                <div class="grid-card-body">
+                    <div>
+                        <span class="category-tag">รีวิว</span>
+                        <h3 class="grid-card-title">BYD Atto 3: ทางเลือกที่น่าสนใจ ในตลาด EV</h3>
+                    </div>
+                    <div class="card-author">24 ก.พ. 2024</div>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <img src="../img/06-quiz-banner.png" alt="Driving Mountain">
+                <div class="grid-card-body">
+                    <div>
+                        <span class="category-tag">คู่มือ</span>
+                        <h3 class="grid-card-title">ขับรถขึ้นเขา-ลงเขาอย่างปลอดภัย เทคนิคที่มือใหม่ควรรู้</h3>
+                    </div>
+                    <div class="card-author">20 ก.พ. 2024</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-banner">
+            <div class="banner-info">
+                <h3>พบกับกิจกรรมและอีเวนต์เรื่องรถ</h3>
+                <p>อัปเดตงานเปิดตัวรถ งานมอเตอร์โชว์ และกิจกรรมสุดพิเศษ</p>
+            </div>
+            <a href="#" class="banner-btn">เปรียบเทียบรถที่เลือก &rarr;</a>
+        </div>
+    </main>
+
+    <footer class="d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <h1>CarGuy</h1>
+            <p class="px-3 m-0">เรื่องรถให้เราช่วยคุณ</p>
+        </div>
+        <div>
+            <ul class="d-flex align-items-center m-0">
+                <li><a href="">เกี่ยวกับเรา</a></li>
+                <li><a href="">ติดต่อเรา</a></li>
+                <li><a href="">นโยบายความเป็นส่วนตัว</a></li>
+                <li><a href="">ข้อกำหนดการใช้งาน</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="text">&copy;2026 CarGuy. All right reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

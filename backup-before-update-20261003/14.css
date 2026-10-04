@@ -1,0 +1,314 @@
+.calendar-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.calendar-hero {
+    background-color: #EBF1FA;
+    padding: 2.5rem 0 2rem 0;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0F1E42;
+    margin-bottom: 0.6rem;
+}
+
+.hero-desc {
+    font-size: 0.95rem;
+    color: #5A6E85;
+    margin-bottom: 2rem;
+}
+
+.calendar-layout {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Calendar Box */
+.calendar-card {
+    flex: 1.3;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(15, 30, 66, 0.04);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin: 0;
+}
+
+.cal-nav {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #5A6E85;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid #E5EDF5;
+    border-left: 1px solid #E5EDF5;
+}
+
+.day-name {
+    padding: 0.5rem 0.2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0F1E42;
+    border-right: 1px solid #E5EDF5;
+    border-bottom: 1px solid #E5EDF5;
+    background-color: #FAFCFF;
+}
+
+.day-cell {
+    min-height: 52px;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    color: #0F1E42;
+    border-right: 1px solid #E5EDF5;
+    border-bottom: 1px solid #E5EDF5;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.day-cell.other-month {
+    color: #C0CFDC;
+}
+
+.day-cell.active-event {
+    background-color: #DDEBFB;
+}
+
+.day-number {
+    display: block;
+    font-weight: 600;
+}
+
+.event-tag {
+    display: block;
+    font-size: 0.6rem;
+    color: #297DF9;
+    font-weight: 600;
+    margin-top: 0.2rem;
+    line-height: 1.1;
+}
+
+/* Upcoming Events Right Column */
+.upcoming-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-title-row h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin: 0;
+}
+
+.btn-see-all {
+    font-size: 0.8rem;
+    color: #297DF9;
+    text-decoration: none;
+}
+
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.upcoming-card {
+    background-color: #DDEBFB;
+    border-radius: 8px;
+    padding: 0.8rem;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.upcoming-img {
+    width: 110px;
+    height: 75px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.upcoming-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upcoming-info {
+    flex: 1;
+}
+
+.upcoming-info h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin-bottom: 0.2rem;
+    line-height: 1.25;
+}
+
+.loc-text {
+    font-size: 0.72rem;
+    color: #8A9BAA;
+    margin-bottom: 0.1rem;
+}
+
+.date-text {
+    font-size: 0.72rem;
+    color: #8A9BAA;
+    margin-bottom: 0.3rem;
+}
+
+.link-more {
+    font-size: 0.72rem;
+    color: #297DF9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Main Content Section */
+.main-content {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.recommended-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin-bottom: 1.2rem;
+}
+
+.recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.rec-card {
+    background-color: #ffffff;
+    border: 1px solid #D0DFEE;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rec-img {
+    width: 100%;
+    height: 130px;
+}
+
+.rec-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rec-info {
+    padding: 0.9rem;
+}
+
+.rec-info h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0F1E42;
+    margin-bottom: 0.2rem;
+}
+
+.rec-info .loc-text,
+.rec-info .date-text {
+    font-size: 0.75rem;
+    color: #8A9BAA;
+    margin-bottom: 0.15rem;
+}
+
+.desc-text {
+    font-size: 0.75rem;
+    color: #5A6E85;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    line-height: 1.35;
+}
+
+@media screen and (max-width: 425px) {
+    .calendar-container {
+        padding: 0 1rem;
+    }
+
+    .calendar-hero {
+        padding: 1.5rem 0 1.2rem 0;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .hero-desc {
+        font-size: 0.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .calendar-layout {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .calendar-card {
+        padding: 0.8rem;
+    }
+
+    .day-cell {
+        min-height: 38px;
+        font-size: 0.75rem;
+        padding: 0.2rem;
+    }
+
+    .event-tag {
+        display: none;
+    }
+
+    .upcoming-card {
+        padding: 0.6rem;
+    }
+
+    .upcoming-img {
+        width: 85px;
+        height: 60px;
+    }
+
+    .recommended-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
